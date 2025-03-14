@@ -54,7 +54,10 @@
         }
       }
 
+      > form > header,
       > header {
+        display: flex;
+        align-items: center;
         > * {
           margin-bottom: 0;
         }
@@ -62,11 +65,12 @@
         #{$close-selector} {
           margin: 0;
           margin-left: var(#{$css-var-prefix}spacing);
+          margin-left: auto;
           padding: 0;
-          float: right;
         }
       }
 
+      > form > footer,
       > footer {
         text-align: right;
 

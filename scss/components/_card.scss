@@ -15,7 +15,9 @@
     box-shadow: var(#{$css-var-prefix}card-box-shadow);
 
     > header,
-    > footer {
+    > form > header,
+    > footer,
+    > form > footer {
       margin-right: calc(var(#{$css-var-prefix}block-spacing-horizontal) * -1);
       margin-left: calc(var(#{$css-var-prefix}block-spacing-horizontal) * -1);
       padding: calc(var(#{$css-var-prefix}block-spacing-vertical) * 0.66)
@@ -23,7 +25,8 @@
       background-color: var(#{$css-var-prefix}card-sectioning-background-color);
     }
 
-    > header {
+    > header,
+    > form > header {
       margin-top: calc(var(#{$css-var-prefix}block-spacing-vertical) * -1);
       margin-bottom: var(#{$css-var-prefix}block-spacing-vertical);
       border-bottom: var(#{$css-var-prefix}border-width)
@@ -33,7 +36,8 @@
       border-top-left-radius: var(#{$css-var-prefix}border-radius);
     }
 
-    > footer {
+    > footer,
+    > form > footer {
       margin-top: var(#{$css-var-prefix}block-spacing-vertical);
       margin-bottom: calc(var(#{$css-var-prefix}block-spacing-vertical) * -1);
       border-top: var(#{$css-var-prefix}border-width)

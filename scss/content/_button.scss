@@ -85,9 +85,9 @@
     }
   }
 
-  #{$parent-selector} [type="submit"],
-  #{$parent-selector} [type="reset"],
-  #{$parent-selector} [type="button"] {
+  #{$parent-selector} :not(footer) > [type="submit"],
+  #{$parent-selector} :not(footer) > [type="reset"],
+  #{$parent-selector} :not(footer) > [type="button"] {
     margin-bottom: var(#{$css-var-prefix}spacing);
   }
 
@@ -172,6 +172,35 @@
       &:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
         #{$css-var-prefix}color: var(#{$css-var-prefix}contrast-hover);
         #{$css-var-prefix}border-color: var(#{$css-var-prefix}contrast-hover);
+      }
+    }
+
+    // Ghost
+    #{$parent-selector} :is(button, [type="submit"], [type="button"], [role="button"]).ghost {
+      #{$css-var-prefix}color: var(#{$css-var-prefix}primary);
+      #{$css-var-prefix}border-color: transparent;
+      #{$css-var-prefix}background-color: transparent;
+
+      &.secondary {
+        #{$css-var-prefix}color: var(#{$css-var-prefix}secondary);
+      }
+
+      &.contrast {
+        #{$css-var-prefix}color: var(#{$css-var-prefix}contrast);
+      }
+
+      &:is([aria-current]:not([aria-current="false"]), :hover, :active, :focus) {
+        #{$css-var-prefix}color: var(#{$css-var-prefix}primary-hover);
+        #{$css-var-prefix}border-color: transparent;
+        #{$css-var-prefix}background-color: transparent;
+
+        &.secondary {
+          #{$css-var-prefix}color: var(#{$css-var-prefix}secondary-hover);
+        }
+
+        &.contrast {
+          #{$css-var-prefix}color: var(#{$css-var-prefix}contrast-hover);
+        }
       }
     }
   } @else {
