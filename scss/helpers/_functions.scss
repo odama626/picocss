@@ -1,49 +1,54 @@
+@use "sass:color";
+
 // Display color as RGB
 @function display-rgb($color) {
-  @return unquote("rgb(" + red($color) + ", " + green($color) + ", " + blue($color) + ")");
+  @return unquote(
+    "rgb(" + color.channel($color, "red", rgb) + ", " + color.channel($color, "green", rgb) + ", " +
+      color.channel($color, "blue", rgb) + ")"
+  );
 }
 
 // Generate a shadow layer
 @function shadow-layer($elevation, $blur, $opacity, $color) {
-  @return #{($elevation * 0.5)} #{$elevation} #{$blur} #{rgba($color, $opacity)};
+  @return #{($elevation * 0.5)} #{$elevation} #{$blur} #{color.change($color, $alpha: $opacity)};
 }
 
 // Generate a shadow with 7 layers
 @function shadow($color) {
   $box-shadow-elevation: 1rem;
-  $box-shadow-blur-strengh: 6rem;
+  $box-shadow-blur-strength: 6rem;
   $box-shadow-opacity: 0.06;
 
   @return shadow-layer(
       $box-shadow-elevation * 0.029,
-      $box-shadow-blur-strengh * 0.029,
+      $box-shadow-blur-strength * 0.029,
       $box-shadow-opacity * 0.283,
       $color
     ),
     shadow-layer(
       $box-shadow-elevation * 0.067,
-      $box-shadow-blur-strengh * 0.067,
+      $box-shadow-blur-strength * 0.067,
       $box-shadow-opacity * 0.4,
       $color
     ),
     shadow-layer(
       $box-shadow-elevation * 0.125,
-      $box-shadow-blur-strengh * 0.125,
+      $box-shadow-blur-strength * 0.125,
       $box-shadow-opacity * 0.5,
       $color
     ),
     shadow-layer(
       $box-shadow-elevation * 0.225,
-      $box-shadow-blur-strengh * 0.225,
+      $box-shadow-blur-strength * 0.225,
       $box-shadow-opacity * 0.6,
       $color
     ),
     shadow-layer(
       $box-shadow-elevation * 0.417,
-      $box-shadow-blur-strengh * 0.417,
+      $box-shadow-blur-strength * 0.417,
       $box-shadow-opacity * 0.717,
       $color
     ),
-    shadow-layer($box-shadow-elevation, $box-shadow-blur-strengh, $box-shadow-opacity, $color),
-    0 0 0 0.0625rem #{rgba($color, ($box-shadow-opacity * 0.25))};
+    shadow-layer($box-shadow-elevation, $box-shadow-blur-strength, $box-shadow-opacity, $color),
+    0 0 0 0.0625rem #{color.change($color, $alpha: $box-shadow-opacity * 0.25)};
 }
