@@ -1,56 +1,78 @@
 @use "sass:color";
 @use "sass:math";
-@use "sass:map";
+@use "sass:meta";
+@use "sass:string";
 @use "settings";
 
-// Determines if the foreground needs to be light or dark
-// depending on the background color passed.
-// W3C reference: http://www.w3.org/TR/AERT#color-contrast
-// Inspiration: https://codepen.io/davidhalford/pen/ALrbEP
-@function foreground-brightness($background-color) {
-  $background-color-brightness: brightness($background-color);
-  $light-color-brightness: brightness(#ffffff);
-
-  @if math.abs($background-color-brightness) < $light-color-brightness * 0.5 {
-    @return "light";
-  } @else {
-    @return "dark";
-  }
+// Get the brightness of a color
+@function brightness($color) {
+  @return math.div(foreground-brightness($color), 255) * 100%;
 }
 
-// Calculates the color brightness
-// Color brightness is determined by the following formula:
-// ((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
-@function brightness($color) {
-  $color-brightness: round(
-    math.div(
-      (color.red($color) * 299) + (color.green($color) * 587) + (color.blue($color) * 114),
-      1000
-    )
-  );
+// Get the foreground brightness of a color
+@function foreground-brightness($color) {
+  @if meta.type-of($color) != "color" {
+    @return 0;
+  }
 
-  @return $color-brightness;
+  @return math.div(
+    (
+      color.channel($color, "red", srgb) * 299 + color.channel($color, "green", srgb) * 587 +
+        color.channel($color, "blue", srgb) * 114
+    ),
+    1000
+  );
+}
+
+// Determines if the foreground needs to be light or dark
+@function foreground($color) {
+  @if meta.type-of($color) != "color" {
+    @return $color;
+  }
+
+  @return if(brightness($color) > 50%, settings.$black, settings.$white);
+}
+
+// Get the inverse color
+@function inverse($color) {
+  @if meta.type-of($color) != "color" {
+    @return $color;
+  }
+
+  @return color.adjust(
+    $color,
+    $red: 255 - color.channel($color, "red", srgb),
+    $green: 255 - color.channel($color, "green", srgb),
+    $blue: 255 - color.channel($color, "blue", srgb)
+  );
+}
+
+// Get the display RGB value
+@function display-rgb($color) {
+  @if meta.type-of($color) != "color" {
+    @return $color;
+  }
+
+  $red: color.channel($color, "red", srgb);
+  $green: color.channel($color, "green", srgb);
+  $blue: color.channel($color, "blue", srgb);
+
+  @return "#{$red},#{$green},#{$blue}";
 }
 
 // Returns the color as RGB, HSL or HEX
-@function display-color($color) {
-  @if map.get(settings.$palette, "export-as") == "rgb" {
-    @return display-rgb($color);
+@function display-color($color, $format: "rgb") {
+  @if meta.type-of($color) != "color" {
+    @return $color;
   }
-  @if map.get(settings.$palette, "export-as") == "hsl" {
-    @return display-hsl($color);
-  }
-  @return $color;
-}
 
-// Display color as HSL
-@function display-hsl($color) {
-  @return unquote(
-    "hsl(#{math.round(hue($color))}, #{math.round(saturation($color))}, #{math.round(lightness($color))})"
+  @return if(
+    $format == "rgb",
+    "rgb(#{color.channel($color, "red", srgb)}, #{color.channel($color, "green", srgb)}, #{color.channel($color, "blue", srgb)})",
+    if(
+      $format == "hsl",
+      "hsl(#{math.round(color.hue($color))}, #{math.round(color.saturation($color))}%, #{math.round(color.lightness($color))}%)",
+      "#{$color}"
+    )
   );
-}
-
-// Display color as RGB
-@function display-rgb($color) {
-  @return unquote("rgb(" + red($color) + ", " + green($color) + ", " + blue($color) + ")");
 }

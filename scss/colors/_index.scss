@@ -156,14 +156,14 @@ $colors: ();
 @each $color in $color-names {
   $color-map: ();
   @each $shade in $shade-values {
-    $color-map: map-merge(
+    $color-map: map.merge(
       $color-map,
       (
         $shade: get-color-shade(map.get($color-hues, $color), $shade),
       )
     );
   }
-  $colors: map-merge(
+  $colors: map.merge(
     $colors,
     (
       $color: $color-map,

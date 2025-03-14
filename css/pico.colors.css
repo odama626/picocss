@@ -1,0 +1,1149 @@
+@charset "UTF-8";
+/*!
+ * Pico CSS ✨ v2.0.6 (https://picocss.com)
+ * Copyright 2019-2024 - Licensed under MIT
+ */
+:root {
+  --pico-color-jade-950: rgb(-0.0183045883, 0.1128496416, 0.0634300225);
+  --pico-color-jade-900: rgb(-0.0592179016, 0.1703913667, 0.0976087479);
+  --pico-color-jade-850: rgb(-0.1039910452, 0.2309680093, 0.1333225465);
+  --pico-color-jade-800: rgb(-0.1496919591, 0.2941903515, 0.1704010926);
+  --pico-color-jade-750: rgb(-0.1966610254, 0.359766812, 0.2087115922);
+  --pico-color-jade-700: rgb(-0.2449468869, 0.4274704236, 0.2481474798);
+  --pico-color-jade-650: rgb(-0.2945165159, 0.4971190965, 0.2886212138);
+  --pico-color-jade-600: rgb(-0.3453129105, 0.5685631897, 0.3300594906);
+  --pico-color-jade-550: rgb(-0.3972740957, 0.6416773133, 0.3723999469);
+  --pico-color-jade-500: rgb(-0.3479643888, 0.6938252494, 0.4434444607);
+  --pico-color-jade-450: rgb(-0.247611258, 0.7454170579, 0.5152885185);
+  --pico-color-jade-400: rgb(0.149517416, 0.7965050675, 0.5880949585);
+  --pico-color-jade-350: rgb(0.3677954898, 0.8471343612, 0.6619362241);
+  --pico-color-jade-300: rgb(0.5150322955, 0.8973440835, 0.7368386082);
+  --pico-color-jade-250: rgb(0.6059451878, 0.9079554092, 0.774864355);
+  --pico-color-jade-200: rgb(0.7014330265, 0.9309551415, 0.8257127796);
+  --pico-color-jade-150: rgb(0.7792319195, 0.940262751, 0.8640752554);
+  --pico-color-jade-100: rgb(0.8664174914, 0.9619860504, 0.9155255539);
+  --pico-color-jade-50: rgb(0.9384130951, 0.9699610427, 0.9542657735);
+  --pico-color-amber-950: rgb(0.1366531821, 0.0696792364, -0.0124305296);
+  --pico-color-amber-900: rgb(0.2056206241, 0.1056178677, -0.0405676753);
+  --pico-color-amber-850: rgb(0.2783704802, 0.1429534485, -0.0763334041);
+  --pico-color-amber-800: rgb(0.3543998688, 0.1815699184, -0.1124818649);
+  --pico-color-amber-750: rgb(0.4333366984, 0.2213650506, -0.1494177375);
+  --pico-color-amber-700: rgb(0.5148937066, 0.262250953, -0.1872445112);
+  --pico-color-amber-650: rgb(0.5988417866, 0.3041521651, -0.2259730194);
+  --pico-color-amber-600: rgb(0.6849934991, 0.3470035403, -0.2655814998);
+  --pico-color-amber-550: rgb(0.7731923305, 0.3907484063, -0.3060367547);
+  --pico-color-amber-500: rgb(0.8152409273, 0.469250608, -0.2795400224);
+  --pico-color-amber-450: rgb(0.8561218463, 0.5452617078, -0.2033415228);
+  --pico-color-amber-400: rgb(0.8959412281, 0.6198115433, 0.1314650612);
+  --pico-color-amber-350: rgb(0.9347844519, 0.6934829584, 0.3311356978);
+  --pico-color-amber-300: rgb(0.9727212748, 0.7666358058, 0.4750091687);
+  --pico-color-amber-250: rgb(0.9700569935, 0.8011128405, 0.5686897102);
+  --pico-color-amber-200: rgb(0.979737842, 0.8476359604, 0.6693279981);
+  --pico-color-amber-150: rgb(0.9753583784, 0.8806943074, 0.7544887456);
+  --pico-color-amber-100: rgb(0.9832563823, 0.9260911338, 0.850547759);
+  --pico-color-amber-50: rgb(0.9771049693, 0.9579673069, 0.9328331227);
+  --pico-color-sand-950: rgb(0.1588475179, 0.0470093649, 0.0223869838);
+  --pico-color-sand-900: rgb(0.2373889259, 0.070065558, 0.0296178515);
+  --pico-color-sand-850: rgb(0.3202307407, 0.0928601979, 0.0358344885);
+  --pico-color-sand-800: rgb(0.4068131129, 0.1155086498, 0.0401869031);
+  --pico-color-sand-750: rgb(0.4967159463, 0.1380852283, 0.0417888153);
+  --pico-color-sand-700: rgb(0.5896128523, 0.1606405214, 0.0398990992);
+  --pico-color-sand-650: rgb(0.6852426759, 0.1832103184, 0.0335588974);
+  --pico-color-sand-600: rgb(0.7833913792, 0.2058206534, 0.021954507);
+  --pico-color-sand-550: rgb(0.8838800589, 0.2284908552, 0.0042359363);
+  --pico-color-sand-500: rgb(0.923314335, 0.3432998844, 0.1989889537);
+  --pico-color-sand-450: rgb(0.9602064446, 0.4411024826, 0.3137622029);
+  --pico-color-sand-400: rgb(0.9945554751, 0.5319005731, 0.4169314519);
+  --pico-color-sand-350: rgb(1.0263463318, 0.6191991139, 0.5164474698);
+  --pico-color-sand-300: rgb(1.0555504218, 0.7046331864, 0.614904039);
+  --pico-color-sand-250: rgb(1.0413202869, 0.7510109904, 0.6761236266);
+  --pico-color-sand-200: rgb(1.0383794283, 0.8089105532, 0.7493144585);
+  --pico-color-sand-150: rgb(1.0195335597, 0.8531798871, 0.8097978038);
+  --pico-color-sand-100: rgb(1.0113619002, 0.9095868926, 0.8830007578);
+  --pico-color-sand-50: rgb(0.9870224682, 0.9524697317, 0.9434513095);
+  --pico-color-zinc-950: rgb(-0.0079899915, 0.0949303856, 0.1651255192);
+  --pico-color-zinc-900: rgb(-0.0371210199, 0.1432469099, 0.2480492901);
+  --pico-color-zinc-850: rgb(-0.0769400183, 0.1938582359, 0.3357361057);
+  --pico-color-zinc-800: rgb(-0.116891872, 0.2465060678, 0.4275238372);
+  --pico-color-zinc-750: rgb(-0.1576445109, 0.3009873702, 0.5229301158);
+  --pico-color-zinc-700: rgb(-0.199375365, 0.3571391217, 0.6215864663);
+  --pico-color-zinc-650: rgb(-0.242116261, 0.4148276758, 0.7232012494);
+  --pico-color-zinc-600: rgb(-0.2858495574, 0.4739414439, 0.8275372374);
+  --pico-color-zinc-550: rgb(-0.3305401325, 0.5343857806, 0.9343972317);
+  --pico-color-zinc-500: rgb(-0.2764487238, 0.5993565989, 0.9619004174);
+  --pico-color-zinc-450: rgb(-0.1408062787, 0.6625299592, 0.9883346409);
+  --pico-color-zinc-400: rgb(0.2399068706, 0.7243786546, 1.0136830111);
+  --pico-color-zinc-350: rgb(0.4014839294, 0.7852208921, 1.0379286204);
+  --pico-color-zinc-300: rgb(0.533070014, 0.8452813243, 1.0610541071);
+  --pico-color-zinc-250: rgb(0.6165466954, 0.8657838683, 1.0426732849);
+  --pico-color-zinc-200: rgb(0.7073534591, 0.8983612276, 1.0367226701);
+  --pico-color-zinc-150: rgb(0.7822545207, 0.9171472967, 1.0163672121);
+  --pico-color-zinc-100: rgb(0.8676508476, 0.9481641164, 1.008151671);
+  --pico-color-zinc-50: rgb(0.9386681782, 0.9653750942, 0.9854916609);
+  --pico-color-slate-950: rgb(0.0199208989, 0.0868101469, 0.1726554427);
+  --pico-color-slate-900: rgb(0.0234355865, 0.1310399635, 0.2591346427);
+  --pico-color-slate-850: rgb(0.0235490318, 0.1772354648, 0.3506081883);
+  --pico-color-slate-800: rgb(0.0188598052, 0.2251939198, 0.446379379);
+  --pico-color-slate-750: rgb(0.0079664774, 0.2747511305, 0.5459410376);
+  --pico-color-slate-700: rgb(-0.010532381, 0.325772615, 0.6489060129);
+  --pico-color-slate-650: rgb(-0.0380381995, 0.3781465544, 0.75496807);
+  --pico-color-slate-600: rgb(-0.0691038885, 0.4317785953, 0.8638782346);
+  --pico-color-slate-550: rgb(-0.0980789649, 0.4865880565, 0.9754296315);
+  --pico-color-slate-500: rgb(0.1664810194, 0.5569814133, 1.0000344904);
+  --pico-color-slate-450: rgb(0.2986931377, 0.6248894311, 1.0234049889);
+  --pico-color-slate-400: rgb(0.409162811, 0.6911301454, 1.0455089907);
+  --pico-color-slate-350: rgb(0.5128295027, 0.7562153584, 1.0663138955);
+  --pico-color-slate-300: rgb(0.6138224019, 0.8204855864, 1.0857859902);
+  --pico-color-slate-250: rgb(0.6763975811, 0.8454096372, 1.063304695);
+  --pico-color-slate-200: rgb(0.7503616604, 0.8823718307, 1.053168318);
+  --pico-color-slate-150: rgb(0.8110614944, 0.9056377132, 1.0283872695);
+  --pico-color-slate-100: rgb(0.884050653, 0.9411760323, 1.0155697129);
+  --pico-color-slate-50: rgb(0.9438887536, 0.9630216147, 0.9880331452);
+  --pico-color-pumpkin-950: rgb(0.1449816569, 0.0630764642, -0.0078194892);
+  --pico-color-pumpkin-900: rgb(0.2175945361, 0.0953916923, -0.0313943975);
+  --pico-color-pumpkin-850: rgb(0.294190492, 0.1287192413, -0.065731797);
+  --pico-color-pumpkin-800: rgb(0.3742436632, 0.1630095971, -0.1006027099);
+  --pico-color-pumpkin-750: rgb(0.4573630748, 0.1982078752, -0.1360967784);
+  --pico-color-pumpkin-700: rgb(0.543246226, 0.2342612714, -0.1723813461);
+  --pico-color-pumpkin-650: rgb(0.6316515916, 0.2711212223, -0.2094954178);
+  --pico-color-pumpkin-600: rgb(0.7223814562, 0.3087437811, -0.2474321812);
+  --pico-color-pumpkin-550: rgb(0.8152706728, 0.3470893767, -0.2861674623);
+  --pico-color-pumpkin-500: rgb(0.8560434309, 0.4332770437, -0.2502937282);
+  --pico-color-pumpkin-450: rgb(0.895135733, 0.5148576959, -0.1471568344);
+  --pico-color-pumpkin-400: rgb(0.9326286179, 0.5939262089, 0.2000075947);
+  --pico-color-pumpkin-350: rgb(0.9685851202, 0.6715442952, 0.3636330472);
+  --pico-color-pumpkin-300: rgb(1.0030543265, 0.748319592, 0.4974354585);
+  --pico-color-pumpkin-250: rgb(0.9959661479, 0.7863262217, 0.585250995);
+  --pico-color-pumpkin-200: rgb(1.0008841049, 0.8362261196, 0.6813442337);
+  --pico-color-pumpkin-150: rgb(0.9911516622, 0.8726041572, 0.7626591935);
+  --pico-color-pumpkin-100: rgb(0.9932081124, 0.9212496986, 0.855283263);
+  --pico-color-pumpkin-50: rgb(0.9805800551, 0.9563585394, 0.9343687367);
+  --pico-color-light: rgb(1, 1, 1);
+  --pico-color-dark: rgb(0, 0, 0);
+}
+
+.pico-color-jade-950 {
+  color: var(--pico-color-jade-950);
+}
+
+.pico-color-jade-900 {
+  color: var(--pico-color-jade-900);
+}
+
+.pico-color-jade-850 {
+  color: var(--pico-color-jade-850);
+}
+
+.pico-color-jade-800 {
+  color: var(--pico-color-jade-800);
+}
+
+.pico-color-jade-750 {
+  color: var(--pico-color-jade-750);
+}
+
+.pico-color-jade-700 {
+  color: var(--pico-color-jade-700);
+}
+
+.pico-color-jade-650 {
+  color: var(--pico-color-jade-650);
+}
+
+.pico-color-jade-600 {
+  color: var(--pico-color-jade-600);
+}
+
+.pico-color-jade-550 {
+  color: var(--pico-color-jade-550);
+}
+
+.pico-color-jade-500 {
+  color: var(--pico-color-jade-500);
+}
+
+.pico-color-jade-450 {
+  color: var(--pico-color-jade-450);
+}
+
+.pico-color-jade-400 {
+  color: var(--pico-color-jade-400);
+}
+
+.pico-color-jade-350 {
+  color: var(--pico-color-jade-350);
+}
+
+.pico-color-jade-300 {
+  color: var(--pico-color-jade-300);
+}
+
+.pico-color-jade-250 {
+  color: var(--pico-color-jade-250);
+}
+
+.pico-color-jade-200 {
+  color: var(--pico-color-jade-200);
+}
+
+.pico-color-jade-150 {
+  color: var(--pico-color-jade-150);
+}
+
+.pico-color-jade-100 {
+  color: var(--pico-color-jade-100);
+}
+
+.pico-color-jade-50 {
+  color: var(--pico-color-jade-50);
+}
+
+.pico-color-amber-950 {
+  color: var(--pico-color-amber-950);
+}
+
+.pico-color-amber-900 {
+  color: var(--pico-color-amber-900);
+}
+
+.pico-color-amber-850 {
+  color: var(--pico-color-amber-850);
+}
+
+.pico-color-amber-800 {
+  color: var(--pico-color-amber-800);
+}
+
+.pico-color-amber-750 {
+  color: var(--pico-color-amber-750);
+}
+
+.pico-color-amber-700 {
+  color: var(--pico-color-amber-700);
+}
+
+.pico-color-amber-650 {
+  color: var(--pico-color-amber-650);
+}
+
+.pico-color-amber-600 {
+  color: var(--pico-color-amber-600);
+}
+
+.pico-color-amber-550 {
+  color: var(--pico-color-amber-550);
+}
+
+.pico-color-amber-500 {
+  color: var(--pico-color-amber-500);
+}
+
+.pico-color-amber-450 {
+  color: var(--pico-color-amber-450);
+}
+
+.pico-color-amber-400 {
+  color: var(--pico-color-amber-400);
+}
+
+.pico-color-amber-350 {
+  color: var(--pico-color-amber-350);
+}
+
+.pico-color-amber-300 {
+  color: var(--pico-color-amber-300);
+}
+
+.pico-color-amber-250 {
+  color: var(--pico-color-amber-250);
+}
+
+.pico-color-amber-200 {
+  color: var(--pico-color-amber-200);
+}
+
+.pico-color-amber-150 {
+  color: var(--pico-color-amber-150);
+}
+
+.pico-color-amber-100 {
+  color: var(--pico-color-amber-100);
+}
+
+.pico-color-amber-50 {
+  color: var(--pico-color-amber-50);
+}
+
+.pico-color-sand-950 {
+  color: var(--pico-color-sand-950);
+}
+
+.pico-color-sand-900 {
+  color: var(--pico-color-sand-900);
+}
+
+.pico-color-sand-850 {
+  color: var(--pico-color-sand-850);
+}
+
+.pico-color-sand-800 {
+  color: var(--pico-color-sand-800);
+}
+
+.pico-color-sand-750 {
+  color: var(--pico-color-sand-750);
+}
+
+.pico-color-sand-700 {
+  color: var(--pico-color-sand-700);
+}
+
+.pico-color-sand-650 {
+  color: var(--pico-color-sand-650);
+}
+
+.pico-color-sand-600 {
+  color: var(--pico-color-sand-600);
+}
+
+.pico-color-sand-550 {
+  color: var(--pico-color-sand-550);
+}
+
+.pico-color-sand-500 {
+  color: var(--pico-color-sand-500);
+}
+
+.pico-color-sand-450 {
+  color: var(--pico-color-sand-450);
+}
+
+.pico-color-sand-400 {
+  color: var(--pico-color-sand-400);
+}
+
+.pico-color-sand-350 {
+  color: var(--pico-color-sand-350);
+}
+
+.pico-color-sand-300 {
+  color: var(--pico-color-sand-300);
+}
+
+.pico-color-sand-250 {
+  color: var(--pico-color-sand-250);
+}
+
+.pico-color-sand-200 {
+  color: var(--pico-color-sand-200);
+}
+
+.pico-color-sand-150 {
+  color: var(--pico-color-sand-150);
+}
+
+.pico-color-sand-100 {
+  color: var(--pico-color-sand-100);
+}
+
+.pico-color-sand-50 {
+  color: var(--pico-color-sand-50);
+}
+
+.pico-color-zinc-950 {
+  color: var(--pico-color-zinc-950);
+}
+
+.pico-color-zinc-900 {
+  color: var(--pico-color-zinc-900);
+}
+
+.pico-color-zinc-850 {
+  color: var(--pico-color-zinc-850);
+}
+
+.pico-color-zinc-800 {
+  color: var(--pico-color-zinc-800);
+}
+
+.pico-color-zinc-750 {
+  color: var(--pico-color-zinc-750);
+}
+
+.pico-color-zinc-700 {
+  color: var(--pico-color-zinc-700);
+}
+
+.pico-color-zinc-650 {
+  color: var(--pico-color-zinc-650);
+}
+
+.pico-color-zinc-600 {
+  color: var(--pico-color-zinc-600);
+}
+
+.pico-color-zinc-550 {
+  color: var(--pico-color-zinc-550);
+}
+
+.pico-color-zinc-500 {
+  color: var(--pico-color-zinc-500);
+}
+
+.pico-color-zinc-450 {
+  color: var(--pico-color-zinc-450);
+}
+
+.pico-color-zinc-400 {
+  color: var(--pico-color-zinc-400);
+}
+
+.pico-color-zinc-350 {
+  color: var(--pico-color-zinc-350);
+}
+
+.pico-color-zinc-300 {
+  color: var(--pico-color-zinc-300);
+}
+
+.pico-color-zinc-250 {
+  color: var(--pico-color-zinc-250);
+}
+
+.pico-color-zinc-200 {
+  color: var(--pico-color-zinc-200);
+}
+
+.pico-color-zinc-150 {
+  color: var(--pico-color-zinc-150);
+}
+
+.pico-color-zinc-100 {
+  color: var(--pico-color-zinc-100);
+}
+
+.pico-color-zinc-50 {
+  color: var(--pico-color-zinc-50);
+}
+
+.pico-color-slate-950 {
+  color: var(--pico-color-slate-950);
+}
+
+.pico-color-slate-900 {
+  color: var(--pico-color-slate-900);
+}
+
+.pico-color-slate-850 {
+  color: var(--pico-color-slate-850);
+}
+
+.pico-color-slate-800 {
+  color: var(--pico-color-slate-800);
+}
+
+.pico-color-slate-750 {
+  color: var(--pico-color-slate-750);
+}
+
+.pico-color-slate-700 {
+  color: var(--pico-color-slate-700);
+}
+
+.pico-color-slate-650 {
+  color: var(--pico-color-slate-650);
+}
+
+.pico-color-slate-600 {
+  color: var(--pico-color-slate-600);
+}
+
+.pico-color-slate-550 {
+  color: var(--pico-color-slate-550);
+}
+
+.pico-color-slate-500 {
+  color: var(--pico-color-slate-500);
+}
+
+.pico-color-slate-450 {
+  color: var(--pico-color-slate-450);
+}
+
+.pico-color-slate-400 {
+  color: var(--pico-color-slate-400);
+}
+
+.pico-color-slate-350 {
+  color: var(--pico-color-slate-350);
+}
+
+.pico-color-slate-300 {
+  color: var(--pico-color-slate-300);
+}
+
+.pico-color-slate-250 {
+  color: var(--pico-color-slate-250);
+}
+
+.pico-color-slate-200 {
+  color: var(--pico-color-slate-200);
+}
+
+.pico-color-slate-150 {
+  color: var(--pico-color-slate-150);
+}
+
+.pico-color-slate-100 {
+  color: var(--pico-color-slate-100);
+}
+
+.pico-color-slate-50 {
+  color: var(--pico-color-slate-50);
+}
+
+.pico-color-pumpkin-950 {
+  color: var(--pico-color-pumpkin-950);
+}
+
+.pico-color-pumpkin-900 {
+  color: var(--pico-color-pumpkin-900);
+}
+
+.pico-color-pumpkin-850 {
+  color: var(--pico-color-pumpkin-850);
+}
+
+.pico-color-pumpkin-800 {
+  color: var(--pico-color-pumpkin-800);
+}
+
+.pico-color-pumpkin-750 {
+  color: var(--pico-color-pumpkin-750);
+}
+
+.pico-color-pumpkin-700 {
+  color: var(--pico-color-pumpkin-700);
+}
+
+.pico-color-pumpkin-650 {
+  color: var(--pico-color-pumpkin-650);
+}
+
+.pico-color-pumpkin-600 {
+  color: var(--pico-color-pumpkin-600);
+}
+
+.pico-color-pumpkin-550 {
+  color: var(--pico-color-pumpkin-550);
+}
+
+.pico-color-pumpkin-500 {
+  color: var(--pico-color-pumpkin-500);
+}
+
+.pico-color-pumpkin-450 {
+  color: var(--pico-color-pumpkin-450);
+}
+
+.pico-color-pumpkin-400 {
+  color: var(--pico-color-pumpkin-400);
+}
+
+.pico-color-pumpkin-350 {
+  color: var(--pico-color-pumpkin-350);
+}
+
+.pico-color-pumpkin-300 {
+  color: var(--pico-color-pumpkin-300);
+}
+
+.pico-color-pumpkin-250 {
+  color: var(--pico-color-pumpkin-250);
+}
+
+.pico-color-pumpkin-200 {
+  color: var(--pico-color-pumpkin-200);
+}
+
+.pico-color-pumpkin-150 {
+  color: var(--pico-color-pumpkin-150);
+}
+
+.pico-color-pumpkin-100 {
+  color: var(--pico-color-pumpkin-100);
+}
+
+.pico-color-pumpkin-50 {
+  color: var(--pico-color-pumpkin-50);
+}
+
+.pico-background-jade-950 {
+  background-color: var(--pico-color-jade-950);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-900 {
+  background-color: var(--pico-color-jade-900);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-850 {
+  background-color: var(--pico-color-jade-850);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-800 {
+  background-color: var(--pico-color-jade-800);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-750 {
+  background-color: var(--pico-color-jade-750);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-700 {
+  background-color: var(--pico-color-jade-700);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-650 {
+  background-color: var(--pico-color-jade-650);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-600 {
+  background-color: var(--pico-color-jade-600);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-550 {
+  background-color: var(--pico-color-jade-550);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-500 {
+  background-color: var(--pico-color-jade-500);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-450 {
+  background-color: var(--pico-color-jade-450);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-400 {
+  background-color: var(--pico-color-jade-400);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-350 {
+  background-color: var(--pico-color-jade-350);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-300 {
+  background-color: var(--pico-color-jade-300);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-250 {
+  background-color: var(--pico-color-jade-250);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-200 {
+  background-color: var(--pico-color-jade-200);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-150 {
+  background-color: var(--pico-color-jade-150);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-100 {
+  background-color: var(--pico-color-jade-100);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-jade-50 {
+  background-color: var(--pico-color-jade-50);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-950 {
+  background-color: var(--pico-color-amber-950);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-900 {
+  background-color: var(--pico-color-amber-900);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-850 {
+  background-color: var(--pico-color-amber-850);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-800 {
+  background-color: var(--pico-color-amber-800);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-750 {
+  background-color: var(--pico-color-amber-750);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-700 {
+  background-color: var(--pico-color-amber-700);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-650 {
+  background-color: var(--pico-color-amber-650);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-600 {
+  background-color: var(--pico-color-amber-600);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-550 {
+  background-color: var(--pico-color-amber-550);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-500 {
+  background-color: var(--pico-color-amber-500);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-450 {
+  background-color: var(--pico-color-amber-450);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-400 {
+  background-color: var(--pico-color-amber-400);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-350 {
+  background-color: var(--pico-color-amber-350);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-300 {
+  background-color: var(--pico-color-amber-300);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-250 {
+  background-color: var(--pico-color-amber-250);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-200 {
+  background-color: var(--pico-color-amber-200);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-150 {
+  background-color: var(--pico-color-amber-150);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-100 {
+  background-color: var(--pico-color-amber-100);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-amber-50 {
+  background-color: var(--pico-color-amber-50);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-950 {
+  background-color: var(--pico-color-sand-950);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-900 {
+  background-color: var(--pico-color-sand-900);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-850 {
+  background-color: var(--pico-color-sand-850);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-800 {
+  background-color: var(--pico-color-sand-800);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-750 {
+  background-color: var(--pico-color-sand-750);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-700 {
+  background-color: var(--pico-color-sand-700);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-650 {
+  background-color: var(--pico-color-sand-650);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-600 {
+  background-color: var(--pico-color-sand-600);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-550 {
+  background-color: var(--pico-color-sand-550);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-500 {
+  background-color: var(--pico-color-sand-500);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-450 {
+  background-color: var(--pico-color-sand-450);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-400 {
+  background-color: var(--pico-color-sand-400);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-350 {
+  background-color: var(--pico-color-sand-350);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-300 {
+  background-color: var(--pico-color-sand-300);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-250 {
+  background-color: var(--pico-color-sand-250);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-200 {
+  background-color: var(--pico-color-sand-200);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-150 {
+  background-color: var(--pico-color-sand-150);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-100 {
+  background-color: var(--pico-color-sand-100);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-sand-50 {
+  background-color: var(--pico-color-sand-50);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-950 {
+  background-color: var(--pico-color-zinc-950);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-900 {
+  background-color: var(--pico-color-zinc-900);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-850 {
+  background-color: var(--pico-color-zinc-850);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-800 {
+  background-color: var(--pico-color-zinc-800);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-750 {
+  background-color: var(--pico-color-zinc-750);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-700 {
+  background-color: var(--pico-color-zinc-700);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-650 {
+  background-color: var(--pico-color-zinc-650);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-600 {
+  background-color: var(--pico-color-zinc-600);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-550 {
+  background-color: var(--pico-color-zinc-550);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-500 {
+  background-color: var(--pico-color-zinc-500);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-450 {
+  background-color: var(--pico-color-zinc-450);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-400 {
+  background-color: var(--pico-color-zinc-400);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-350 {
+  background-color: var(--pico-color-zinc-350);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-300 {
+  background-color: var(--pico-color-zinc-300);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-250 {
+  background-color: var(--pico-color-zinc-250);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-200 {
+  background-color: var(--pico-color-zinc-200);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-150 {
+  background-color: var(--pico-color-zinc-150);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-100 {
+  background-color: var(--pico-color-zinc-100);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-zinc-50 {
+  background-color: var(--pico-color-zinc-50);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-950 {
+  background-color: var(--pico-color-slate-950);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-900 {
+  background-color: var(--pico-color-slate-900);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-850 {
+  background-color: var(--pico-color-slate-850);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-800 {
+  background-color: var(--pico-color-slate-800);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-750 {
+  background-color: var(--pico-color-slate-750);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-700 {
+  background-color: var(--pico-color-slate-700);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-650 {
+  background-color: var(--pico-color-slate-650);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-600 {
+  background-color: var(--pico-color-slate-600);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-550 {
+  background-color: var(--pico-color-slate-550);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-500 {
+  background-color: var(--pico-color-slate-500);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-450 {
+  background-color: var(--pico-color-slate-450);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-400 {
+  background-color: var(--pico-color-slate-400);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-350 {
+  background-color: var(--pico-color-slate-350);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-300 {
+  background-color: var(--pico-color-slate-300);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-250 {
+  background-color: var(--pico-color-slate-250);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-200 {
+  background-color: var(--pico-color-slate-200);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-150 {
+  background-color: var(--pico-color-slate-150);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-100 {
+  background-color: var(--pico-color-slate-100);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-slate-50 {
+  background-color: var(--pico-color-slate-50);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-950 {
+  background-color: var(--pico-color-pumpkin-950);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-900 {
+  background-color: var(--pico-color-pumpkin-900);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-850 {
+  background-color: var(--pico-color-pumpkin-850);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-800 {
+  background-color: var(--pico-color-pumpkin-800);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-750 {
+  background-color: var(--pico-color-pumpkin-750);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-700 {
+  background-color: var(--pico-color-pumpkin-700);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-650 {
+  background-color: var(--pico-color-pumpkin-650);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-600 {
+  background-color: var(--pico-color-pumpkin-600);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-550 {
+  background-color: var(--pico-color-pumpkin-550);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-500 {
+  background-color: var(--pico-color-pumpkin-500);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-450 {
+  background-color: var(--pico-color-pumpkin-450);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-400 {
+  background-color: var(--pico-color-pumpkin-400);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-350 {
+  background-color: var(--pico-color-pumpkin-350);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-300 {
+  background-color: var(--pico-color-pumpkin-300);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-250 {
+  background-color: var(--pico-color-pumpkin-250);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-200 {
+  background-color: var(--pico-color-pumpkin-200);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-150 {
+  background-color: var(--pico-color-pumpkin-150);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-100 {
+  background-color: var(--pico-color-pumpkin-100);
+  color: var(--pico-color-dark);
+}
+
+.pico-background-pumpkin-50 {
+  background-color: var(--pico-color-pumpkin-50);
+  color: var(--pico-color-dark);
+}

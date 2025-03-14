@@ -17,9 +17,10 @@ $colors-with-white-inverse: (
   "red",
   "slate",
   "violet",
-  "zinc"
+  "zinc",
+  "grey"
 );
-$colors-with-black-inverse: ("amber", "lime", "orange", "yellow");
+$colors-with-black-inverse: ("amber", "lime", "orange", "yellow", "pumpkin", "sand");
 
 @function get-dark-variables($color, $inverse-color: $black) {
   $switch-thumb-box-shadow: if(
