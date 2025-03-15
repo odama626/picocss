@@ -85,9 +85,9 @@
     }
   }
 
-  #{$parent-selector} :not(footer) > [type="submit"],
-  #{$parent-selector} :not(footer) > [type="reset"],
-  #{$parent-selector} :not(footer) > [type="button"] {
+  #{$parent-selector} > [type="submit"],
+  #{$parent-selector} > [type="reset"],
+  #{$parent-selector} > [type="button"] {
     margin-bottom: var(#{$css-var-prefix}spacing);
   }
 

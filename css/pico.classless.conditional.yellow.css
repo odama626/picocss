@@ -895,9 +895,9 @@ main {
   --pico-box-shadow: var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)), 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
 }
 
-.pico :not(footer) > [type=submit],
-.pico :not(footer) > [type=reset],
-.pico :not(footer) > [type=button] {
+.pico > [type=submit],
+.pico > [type=reset],
+.pico > [type=button] {
   margin-bottom: var(--pico-spacing);
 }
 
