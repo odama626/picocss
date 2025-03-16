@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/**
+ * Pico CSS Theme Colors ✨
+ * Generated theme colors using OKLCH variables
+ * Copyright 2019-2024 - Licensed under MIT
+ */
+:root {
+  /* Base theme variable - change this to set the theme color */
+  --hue: var(--color-blue-hue); /* Default to blue theme */
+  /* Light theme (default) */
+  --text-selection-color: oklch(var(--luma-400) var(--chroma-400) var(--hue) / 0.25);
+  --primary: oklch(var(--luma-550) var(--chroma-550) var(--hue));
+  --primary-background: oklch(var(--luma-200) var(--chroma-200) var(--hue));
+  --primary-underline: oklch(var(--luma-400) var(--chroma-400) var(--hue) / 0.5);
+  --primary-hover: oklch(var(--luma-650) var(--chroma-650) var(--hue));
+  --primary-hover-background: oklch(var(--luma-250) var(--chroma-250) var(--hue));
+  --primary-focus: oklch(var(--luma-400) var(--chroma-400) var(--hue) / 0.5);
+  --primary-inverse: oklch(100% 0 0); /* White for dark colors */
+  --switch-thumb-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  --icon-loading-filter: brightness(0) invert(0);
+  /* Color utility classes */
+  --color-current: oklch(var(--luma-500) var(--chroma-500) var(--hue));
+  --color-current-light: oklch(var(--luma-200) var(--chroma-200) var(--hue));
+  --color-current-dark: oklch(var(--luma-800) var(--chroma-800) var(--hue));
+}
+
+/* Dark theme */
+[data-theme=dark] {
+  --text-selection-color: oklch(var(--luma-350) var(--chroma-350) var(--hue) / 0.1875);
+  --primary: oklch(var(--luma-350) var(--chroma-350) var(--hue));
+  --primary-background: oklch(var(--luma-100) var(--chroma-100) var(--hue));
+  --primary-underline: oklch(var(--luma-350) var(--chroma-350) var(--hue) / 0.5);
+  --primary-hover: oklch(var(--luma-250) var(--chroma-250) var(--hue));
+  --primary-hover-background: oklch(var(--luma-150) var(--chroma-150) var(--hue));
+  --primary-focus: oklch(var(--luma-350) var(--chroma-350) var(--hue) / 0.375);
+  --primary-inverse: oklch(0% 0 0); /* Black for light colors */
+  --switch-thumb-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  --icon-loading-filter: brightness(0) invert(0);
+  /* Color utility classes */
+  --color-current: oklch(var(--luma-350) var(--chroma-350) var(--hue));
+  --color-current-light: oklch(var(--luma-150) var(--chroma-150) var(--hue));
+  --color-current-dark: oklch(var(--luma-600) var(--chroma-600) var(--hue));
+}
+
+/* Theme color presets - just change the --hue variable */
+.theme-red {
+  --hue: var(--color-red-hue);
+}
+
+.theme-pink {
+  --hue: var(--color-pink-hue);
+}
+
+.theme-fuchsia {
+  --hue: var(--color-fuchsia-hue);
+}
+
+.theme-purple {
+  --hue: var(--color-purple-hue);
+}
+
+.theme-violet {
+  --hue: var(--color-violet-hue);
+}
+
+.theme-indigo {
+  --hue: var(--color-indigo-hue);
+}
+
+.theme-blue {
+  --hue: var(--color-blue-hue);
+}
+
+.theme-azure {
+  --hue: var(--color-azure-hue);
+}
+
+[data-theme=dark] .theme-azure {
+  --primary-inverse: oklch(100% 0 0); /* White for azure in dark mode */
+  --icon-loading-filter: brightness(0) invert(1);
+}
+
+.theme-cyan {
+  --hue: var(--color-cyan-hue);
+}
+
+.theme-jade {
+  --hue: var(--color-jade-hue);
+}
+
+.theme-green {
+  --hue: var(--color-green-hue);
+}
+
+.theme-lime {
+  --hue: var(--color-lime-hue);
+}
+
+.theme-yellow {
+  --hue: var(--color-yellow-hue);
+}
+
+.theme-amber {
+  --hue: var(--color-amber-hue);
+}
+
+.theme-pumpkin {
+  --hue: var(--color-pumpkin-hue);
+}
+
+.theme-orange {
+  --hue: var(--color-orange-hue);
+}
+
+.theme-sand {
+  --hue: var(--color-sand-hue);
+}
+
+.theme-zinc {
+  --hue: var(--color-zinc-hue);
+}
+
+.theme-slate {
+  --hue: var(--color-slate-hue);
+}
+
+/* Special case for grey which has no hue */
+.theme-grey {
+  --primary: oklch(var(--luma-550) 0 0);
+  --primary-background: oklch(var(--luma-200) 0 0);
+  --primary-underline: oklch(var(--luma-400) 0 0 / 0.5);
+  --primary-hover: oklch(var(--luma-650) 0 0);
+  --primary-hover-background: oklch(var(--luma-250) 0 0);
+  --primary-focus: oklch(var(--luma-400) 0 0 / 0.5);
+  --color-current: oklch(var(--luma-500) 0 0);
+  --color-current-light: oklch(var(--luma-200) 0 0);
+  --color-current-dark: oklch(var(--luma-800) 0 0);
+}
+
+[data-theme=dark] .theme-grey {
+  --primary: oklch(var(--luma-350) 0 0);
+  --primary-background: oklch(var(--luma-100) 0 0);
+  --primary-underline: oklch(var(--luma-350) 0 0 / 0.5);
+  --primary-hover: oklch(var(--luma-250) 0 0);
+  --primary-hover-background: oklch(var(--luma-150) 0 0);
+  --primary-focus: oklch(var(--luma-350) 0 0 / 0.375);
+  --color-current: oklch(var(--luma-350) 0 0);
+  --color-current-light: oklch(var(--luma-150) 0 0);
+  --color-current-dark: oklch(var(--luma-600) 0 0);
+}
+
+/* Automatic contrast adjustment for text */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --text-selection-color: oklch(var(--luma-350) var(--chroma-350) var(--hue) / 0.1875);
+    --primary: oklch(var(--luma-350) var(--chroma-350) var(--hue));
+    --primary-background: oklch(var(--luma-100) var(--chroma-100) var(--hue));
+    --primary-underline: oklch(var(--luma-350) var(--chroma-350) var(--hue) / 0.5);
+    --primary-hover: oklch(var(--luma-250) var(--chroma-250) var(--hue));
+    --primary-hover-background: oklch(var(--luma-150) var(--chroma-150) var(--hue));
+    --primary-focus: oklch(var(--luma-350) var(--chroma-350) var(--hue) / 0.375);
+    --primary-inverse: oklch(0% 0 0);
+    --color-current: oklch(var(--luma-350) var(--chroma-350) var(--hue));
+    --color-current-light: oklch(var(--luma-150) var(--chroma-150) var(--hue));
+    --color-current-dark: oklch(var(--luma-600) var(--chroma-600) var(--hue));
+  }
+}

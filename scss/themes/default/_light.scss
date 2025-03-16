@@ -1,8 +1,7 @@
 @use "sass:map";
-@use "../../colors" as *;
+@use "../../colors/variables" as *;
 @use "../../settings" as *;
 @use "../../helpers/functions";
-@use "theme-colors";
 
 // Default: Light theme
 @mixin theme {

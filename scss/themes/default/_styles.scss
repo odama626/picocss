@@ -1,8 +1,7 @@
 @use "sass:map";
-@use "../../colors" as *;
 @use "../../settings" as *;
 @use "../../helpers/functions";
-@use "theme-colors";
+@use "../../colors/variables" as *;
 
 @if map.get($modules, "themes/default") {
   /**
@@ -422,11 +421,7 @@
       }
       #{$selector} {
         &::before {
-          @if theme-colors.get("primary-inverse", "dark") == $white {
-            filter: brightness(0) invert(1);
-          } @else {
-            filter: brightness(0) invert(0);
-          }
+          filter: var (--icon-loading-filter);
         }
       }
     }
