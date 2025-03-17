@@ -628,7 +628,6 @@ progress,
 :where(:root) {
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
   background-color: var(--pico-background-color);
   color: var(--pico-color);
@@ -639,8 +638,6 @@ progress,
   text-underline-offset: var(--pico-text-underline-offset);
   text-rendering: optimizeLegibility;
   overflow-wrap: break-word;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
   tab-size: 4;
 }
 
@@ -857,10 +854,6 @@ del {
   color: var(--pico-del-color);
 }
 
-::-moz-selection {
-  background-color: var(--pico-text-selection-color);
-}
-
 ::selection {
   background-color: var(--pico-text-selection-color);
 }
@@ -876,13 +869,10 @@ del {
   outline: none;
   background-color: var(--pico-background-color);
   color: var(--pico-color);
-  -webkit-text-decoration: var(--pico-text-decoration);
   text-decoration: var(--pico-text-decoration);
   text-decoration-color: var(--pico-underline);
   text-underline-offset: 0.125em;
-  transition: background-color var(--pico-transition), color var(--pico-transition), box-shadow var(--pico-transition), -webkit-text-decoration var(--pico-transition);
   transition: background-color var(--pico-transition), color var(--pico-transition), text-decoration var(--pico-transition), box-shadow var(--pico-transition);
-  transition: background-color var(--pico-transition), color var(--pico-transition), text-decoration var(--pico-transition), box-shadow var(--pico-transition), -webkit-text-decoration var(--pico-transition);
 }
 :where(a:not([role=button])):is([aria-current]:not([aria-current=false]), :hover, :active, :focus),
 [role=link]:is([aria-current]:not([aria-current=false]), :hover, :active, :focus) {
@@ -939,8 +929,6 @@ button,
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
   transition: background-color var(--pico-transition), border-color var(--pico-transition), color var(--pico-transition), box-shadow var(--pico-transition);
 }
@@ -1273,8 +1261,6 @@ textarea {
 input:not([type=checkbox], [type=radio], [type=range], [type=file]),
 select,
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   padding: var(--pico-form-element-spacing-vertical) var(--pico-form-element-spacing-horizontal);
 }
@@ -1463,7 +1449,6 @@ label > :where(input, select, textarea) {
  * Checkboxes, Radios and Switches
  */
 label:has([type=checkbox], [type=radio]) {
-  width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
 }
@@ -1695,7 +1680,6 @@ input:not([type=checkbox], [type=radio], [type=range], [type=file])[type=time] {
   height: 0.375rem;
   border-radius: var(--pico-border-radius);
   background-color: var(--pico-range-border-color);
-  -webkit-transition: background-color var(--pico-transition), box-shadow var(--pico-transition);
   transition: background-color var(--pico-transition), box-shadow var(--pico-transition);
 }
 [type=range]::-moz-range-track {
@@ -1703,7 +1687,6 @@ input:not([type=checkbox], [type=radio], [type=range], [type=file])[type=time] {
   height: 0.375rem;
   border-radius: var(--pico-border-radius);
   background-color: var(--pico-range-border-color);
-  -moz-transition: background-color var(--pico-transition), box-shadow var(--pico-transition);
   transition: background-color var(--pico-transition), box-shadow var(--pico-transition);
 }
 [type=range]::-ms-track {
@@ -1711,7 +1694,6 @@ input:not([type=checkbox], [type=radio], [type=range], [type=file])[type=time] {
   height: 0.375rem;
   border-radius: var(--pico-border-radius);
   background-color: var(--pico-range-border-color);
-  -ms-transition: background-color var(--pico-transition), box-shadow var(--pico-transition);
   transition: background-color var(--pico-transition), box-shadow var(--pico-transition);
 }
 [type=range]::-webkit-slider-thumb {
@@ -1723,7 +1705,6 @@ input:not([type=checkbox], [type=radio], [type=range], [type=file])[type=time] {
   border-radius: 50%;
   background-color: var(--pico-range-thumb-color);
   cursor: pointer;
-  -webkit-transition: background-color var(--pico-transition), transform var(--pico-transition);
   transition: background-color var(--pico-transition), transform var(--pico-transition);
 }
 [type=range]::-moz-range-thumb {
@@ -1735,7 +1716,6 @@ input:not([type=checkbox], [type=radio], [type=range], [type=file])[type=time] {
   border-radius: 50%;
   background-color: var(--pico-range-thumb-color);
   cursor: pointer;
-  -moz-transition: background-color var(--pico-transition), transform var(--pico-transition);
   transition: background-color var(--pico-transition), transform var(--pico-transition);
 }
 [type=range]::-ms-thumb {
@@ -1747,7 +1727,6 @@ input:not([type=checkbox], [type=radio], [type=range], [type=file])[type=time] {
   border-radius: 50%;
   background-color: var(--pico-range-thumb-color);
   cursor: pointer;
-  -ms-transition: background-color var(--pico-transition), transform var(--pico-transition);
   transition: background-color var(--pico-transition), transform var(--pico-transition);
 }
 [type=range]:active, [type=range]:focus-within {
@@ -2086,7 +2065,6 @@ dialog {
   min-height: 100%;
   padding: 0;
   border: 0;
-  -webkit-backdrop-filter: var(--pico-modal-overlay-backdrop-filter);
   backdrop-filter: var(--pico-modal-overlay-backdrop-filter);
   background-color: var(--pico-modal-overlay-background-color);
   color: var(--pico-color);
@@ -2296,7 +2274,6 @@ progress::-webkit-progress-bar {
 }
 progress[value]::-webkit-progress-value {
   background-color: var(--pico-progress-color);
-  -webkit-transition: inline-size var(--pico-transition);
   transition: inline-size var(--pico-transition);
 }
 progress::-moz-progress-bar {
