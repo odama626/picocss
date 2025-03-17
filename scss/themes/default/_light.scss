@@ -8,42 +8,48 @@
   #{$css-var-prefix}background-color: #{$white};
 
   // Text color
-  #{$css-var-prefix}color: #{$zinc-750};
+  #{$css-var-prefix}color: #{get-shade-from-color(zinc, 750)};
+  #{$css-var-prefix}hue: var(#{$css-var-prefix}color-#{$theme-color}-hue);
+  $primary-hue: var(#{$css-var-prefix}hue);
 
   // Text selection color
-  #{$css-var-prefix}text-selection-color: theme-colors.get("text-selection-color", "light");
+  #{$css-var-prefix}text-selection-color: #{get-shade(#{$primary-hue}, 400, 0.25)};
+
+  #{$css-var-prefix}switch-thumb-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  #{$css-var-prefix}icon-loading-filter: brightness(0) invert(0);
 
   // Muted colors
-  #{$css-var-prefix}muted-color: #{$zinc-550};
-  #{$css-var-prefix}muted-border-color: #{mix($slate-100, $slate-50)};
+  #{$css-var-prefix}muted-color: #{get-shade-from-color(zinc, 550)};
+  #{$css-var-prefix}muted-border-color: color-mix(
+    in oklch,
+    #{get-shade-from-color(slate, 100)},
+    #{get-shade-from-color(slate, 50)}
+  );
 
   // Primary colors
-  #{$css-var-prefix}primary: theme-colors.get("primary", "light");
-  #{$css-var-prefix}primary-background: theme-colors.get("primary-background", "light");
-  #{$css-var-prefix}primary-border: var(#{$css-var-prefix}primary-background);
-  #{$css-var-prefix}primary-underline: theme-colors.get("primary-underline", "light");
-  #{$css-var-prefix}primary-hover: theme-colors.get("primary-hover", "light");
-  #{$css-var-prefix}primary-hover-background: theme-colors.get("primary-hover-background", "light");
-  #{$css-var-prefix}primary-hover-border: var(#{$css-var-prefix}primary-hover-background);
-  #{$css-var-prefix}primary-hover-underline: var(#{$css-var-prefix}primary-hover);
-  #{$css-var-prefix}primary-focus: theme-colors.get("primary-focus", "light");
-  #{$css-var-prefix}primary-inverse: theme-colors.get("primary-inverse", "light");
+  #{$css-var-prefix}primary: #{get-shade(#{$primary-hue}, 550)};
+  #{$css-var-prefix}primary-background: #{get-shade(#{$primary-hue}, 200)};
+  #{$css-var-prefix}primary-underline: #{get-shade(#{$primary-hue}, 400, 0.5)};
+  #{$css-var-prefix}primary-hover: #{get-shade(#{$primary-hue}, 650)};
+  #{$css-var-prefix}primary-hover-background: #{get-shade(#{$primary-hue}, 250)};
+  #{$css-var-prefix}primary-focus: #{get-shade(#{$primary-hue}, 400, 0.5)};
+  #{$css-var-prefix}primary-inverse: oklch(100% 0 0); /* White for dark colors */
 
   // Secondary colors
-  #{$css-var-prefix}secondary: #{$slate-550};
-  #{$css-var-prefix}secondary-background: #{$slate-600};
+  #{$css-var-prefix}secondary: #{get-shade-from-color(slate, 550)};
+  #{$css-var-prefix}secondary-background: #{get-shade-from-color(slate,600)};
   #{$css-var-prefix}secondary-border: var(#{$css-var-prefix}secondary-background);
-  #{$css-var-prefix}secondary-underline: #{rgba($slate-550, 0.5)};
-  #{$css-var-prefix}secondary-hover: #{$slate-650};
-  #{$css-var-prefix}secondary-hover-background: #{$slate-650};
+  #{$css-var-prefix}secondary-underline: #{get-shade-from-color(slate,550,0.5)}
+  #{$css-var-prefix}secondary-hover: #{get-shade-from-color(slate,650)};
+  #{$css-var-prefix}secondary-hover-background: #{get-shade-from-color(slate,650)};
   #{$css-var-prefix}secondary-hover-border: var(#{$css-var-prefix}secondary-hover-background);
   #{$css-var-prefix}secondary-hover-underline: var(#{$css-var-prefix}secondary-hover);
-  #{$css-var-prefix}secondary-focus: #{rgba($slate-550, 0.25)};
+  #{$css-var-prefix}secondary-focus: #{get-shade-from-color(slate,550, 0.25)};
   #{$css-var-prefix}secondary-inverse: #{$white};
 
   // Contrast colors
-  #{$css-var-prefix}contrast: #{$slate-900};
-  #{$css-var-prefix}contrast-background: #{$slate-900};
+  #{$css-var-prefix}contrast: #{get-shade-from-color(slate,900)};
+  #{$css-var-prefix}contrast-background: #{get-shade-from-color(slate,900)};
   #{$css-var-prefix}contrast-border: var(#{$css-var-prefix}contrast-background);
   #{$css-var-prefix}contrast-underline: #{rgba($slate-900, 0.5)};
   #{$css-var-prefix}contrast-hover: #{$black};
