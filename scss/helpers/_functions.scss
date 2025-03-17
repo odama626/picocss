@@ -5,7 +5,7 @@
 
 // Generate a shadow layer
 @function shadow-layer($elevation, $blur, $opacity, $color) {
-  @return #{($elevation * 0.5)} #{$elevation} #{$blur} #{rgba($color, $opacity)};
+  @return #{($elevation * 0.5)} #{$elevation} #{$blur} #{oklch(#{$color} / #{$opacity})};
 }
 
 // Generate a shadow with 7 layers
@@ -45,5 +45,5 @@
       $color
     ),
     shadow-layer($box-shadow-elevation, $box-shadow-blur-strengh, $box-shadow-opacity, $color),
-    0 0 0 0.0625rem #{rgba($color, ($box-shadow-opacity * 0.25))};
+    0 0 0 0.0625rem oklch(#{$color} / #{$box-shadow-opacity * 0.25});
 }

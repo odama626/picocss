@@ -68,81 +68,81 @@ $zinc-400: #8891a4;
 
   /* Red */
   #{$css-var-prefix}color-red-hue: 32.3;
-  --color-red: var(--color-red-550);
+  #{$css-var-prefix}color-red: #{get-shade-from-color("red", 550)};
 
   /* Pink */
-  --color-pink-hue: 9.1;
-  --color-pink: var(--color-pink-500);
+  #{$css-var-prefix}color-pink-hue: 9.1;
+  #{$css-var-prefix}color-pink: #{get-shade-from-color("pink", 500)};
 
   /* Fuchsia */
-  --color-fuchsia-hue: 345.9;
-  --color-fuchsia: var(--color-fuchsia-550);
+  #{$css-var-prefix}color-fuchsia-hue: 345.9;
+  #{$css-var-prefix}color-fuchsia: #{get-shade-from-color("fuchsia", 550)};
 
   /* Purple */
-  --color-purple-hue: 321.5;
-  --color-purple: var(--color-purple-600);
+  #{$css-var-prefix}color-purple-hue: 321.5;
+  #{$css-var-prefix}color-purple: #{get-shade-from-color("purple", 600)};
 
   /* Violet */
-  --color-violet-hue: 301.9;
-  --color-violet: var(--color-violet-600);
+  #{$css-var-prefix}color-violet-hue: 301.9;
+  #{$css-var-prefix}color-violet: #{get-shade-from-color("violet", 600)};
 
   /* Indigo */
-  --color-indigo-hue: 285.7;
-  --color-indigo: var(--color-indigo-600);
+  #{$css-var-prefix}color-indigo-hue: 285.7;
+  #{$css-var-prefix}color-indigo: #{get-shade-from-color("indigo", 600)};
 
   /* Blue */
-  --color-blue-hue: 262.7;
-  --color-blue: var(--color-blue-550);
+  #{$css-var-prefix}color-blue-hue: 262.7;
+  #{$css-var-prefix}color-blue: #{get-shade-from-color("blue", 550)};
 
   /* Azure */
-  --color-azure-hue: 244.5;
-  --color-azure: var(--color-azure-550);
+  #{$css-var-prefix}color-azure-hue: 244.5;
+  #{$css-var-prefix}color-azure: #{get-shade-from-color("azure", 550)};
 
   /* Cyan */
-  --color-cyan-hue: 194.7;
-  --color-cyan: var(--color-cyan-550);
+  #{$css-var-prefix}color-cyan-hue: 194.7;
+  #{$css-var-prefix}color-cyan: #{get-shade-from-color("cyan", 550)};
 
   /* Jade */
-  --color-jade-hue: 160.5;
-  --color-jade: var(--color-jade-550);
+  #{$css-var-prefix}color-jade-hue: 160.5;
+  #{$css-var-prefix}color-jade: #{get-shade-from-color("jade", 550)};
 
   /* Green */
-  --color-green-hue: 137.5;
-  --color-green: var(--color-green-500);
+  #{$css-var-prefix}color-green-hue: 137.5;
+  #{$css-var-prefix}color-green: #{get-shade-from-color("green", 500)};
 
   /* Lime */
-  --color-lime-hue: 123.8;
-  --color-lime: var(--color-lime-200);
+  #{$css-var-prefix}color-lime-hue: 123.8;
+  #{$css-var-prefix}color-lime: #{get-shade-from-color("lime", 200)};
 
   /* Yellow */
-  --color-yellow-hue: 102.7;
-  --color-yellow: var(--color-yellow-100);
+  #{$css-var-prefix}color-yellow-hue: 102.7;
+  #{$css-var-prefix}color-yellow: #{get-shade-from-color("yellow", 100)};
 
   /* Amber */
-  --color-amber-hue: 84.2;
-  --color-amber: var(--color-amber-200);
+  #{$css-var-prefix}color-amber-hue: 84.2;
+  #{$css-var-prefix}color-amber: #{get-shade-from-color("amber", 200)};
 
   /* Pumpkin */
-  --color-pumpkin-hue: 65.1;
-  --color-pumpkin: var(--color-pumpkin-300);
+  #{$css-var-prefix}color-pumpkin-hue: 65.1;
+  #{$css-var-prefix}color-pumpkin: #{get-shade-from-color("pumpkin", 300)};
 
   /* Orange */
-  --color-orange-hue: 39.7;
-  --color-orange: var(--color-orange-500);
+  #{$css-var-prefix}color-orange-hue: 39.7;
+  #{$css-var-prefix}color-orange: #{get-shade-from-color("orange", 500)};
 
   /* Sand */
-  --color-sand-hue: 90.9;
-  --color-sand: var(--color-sand-200);
+  #{$css-var-prefix}color-sand-hue: 90.9;
+  #{$css-var-prefix}color-sand: #{get-shade-from-color("sand", 200)};
 
   /* Grey */
-  --color-grey-hue: 0;
-  --color-grey: var(--color-grey-300);
+  #{$css-var-prefix}color-grey-hue: 0;
+  #{$css-var-prefix}color-grey: #{get-shade-from-color("grey", 300)};
 
   /* Zinc */
-  --color-zinc-hue: 262.3;
-  --color-zinc: var(--color-zinc-550);
+  #{$css-var-prefix}color-zinc-hue: 262.3;
+  #{$css-var-prefix}color-zinc: #{get-shade-from-color("zinc", 550)};
 
   /* Slate */
-  --color-slate-hue: 264.9;
-  --color-slate: var(--color-slate-600);
+  #{$css-var-prefix}color-slate-hue: 264.9;
+  #{$css-var-prefix}color-slate: #{get-shade-from-color("slate", 600)};
 }

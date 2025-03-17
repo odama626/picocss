@@ -5,17 +5,33 @@
 
 // Default: Dark theme
 @mixin theme {
-  #{$css-var-prefix}background-color: #{mix($slate-950, $slate-900)};
+  #{$css-var-prefix}background-color: color-mix(
+    in oklch,
+    #{get-shade-from-color(slate, 950)},
+    #{get-shade-from-color(slate, 900)}
+  );
+  #{$css-var-prefix}hue: var(#{$css-var-prefix}color-#{$theme-color}-hue);
+  $primary-hue: var(#{$css-var-prefix}hue);
 
   // Text color
-  #{$css-var-prefix}color: #{$zinc-200};
+  #{$css-var-prefix}color: #{get-shade-from-color(zinc, 200)};
 
   // Text selection color
   #{$css-var-prefix}text-selection-color: var(--text-selection-color);
 
   // Muted colors
-  #{$css-var-prefix}muted-color: #{$zinc-450};
-  #{$css-var-prefix}muted-border-color: #{$slate-850};
+  #{$css-var-prefix}muted-color: #{get-shade-from-color(zinc, 450)};
+  #{$css-var-prefix}muted-border-color: #{get-shade-from-color(slate, 850)};
+
+  #{$css-var-prefix}primary: #{get-shade(#{$primary-hue}, 350)};
+  #{$css-var-prefix}primary-background: #{get-shade(#{$primary-hue}, 100)};
+  #{$css-var-prefix}primary-underline: #{get-shade(#{$primary-hue}, 350, 0.5)};
+  #{$css-var-prefix}primary-hover: #{get-shade(#{$primary-hue}, 250)};
+  #{$css-var-prefix}primary-hover-background: #{get-shade(#{$primary-hue}, 150)};
+  #{$css-var-prefix}primary-focus: #{get-shade(#{$primary-hue}, 350, 0.375)};
+  #{$css-var-prefix}primary-inverse: oklch(0% 0 0); /* Black for light colors */
+  #{$css-var-prefix}switch-thumb-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  #{$css-var-prefix}icon-loading-filter: brightness(0) invert(0);
 
   // Primary colors
   #{$css-var-prefix}primary: var(--primary);
@@ -27,113 +43,113 @@
   #{$css-var-prefix}primary-inverse: var(--primary-inverse);
 
   // Secondary colors
-  #{$css-var-prefix}secondary: #{$zinc-500};
-  #{$css-var-prefix}secondary-background: #{$slate-850};
-  #{$css-var-prefix}secondary-underline: #{$zinc-500};
-  #{$css-var-prefix}secondary-hover: #{$zinc-300};
-  #{$css-var-prefix}secondary-hover-background: #{$slate-800};
-  #{$css-var-prefix}secondary-focus: #{rgba($zinc-500, 0.25)};
-  #{$css-var-prefix}secondary-inverse: #{$zinc-950};
+  #{$css-var-prefix}secondary: #{get-shade-from-color(zinc, 500)};
+  #{$css-var-prefix}secondary-background: #{get-shade-from-color(slate, 850)};
+  #{$css-var-prefix}secondary-underline: #{get-shade-from-color(zinc, 500)};
+  #{$css-var-prefix}secondary-hover: #{get-shade-from-color(zinc, 300)};
+  #{$css-var-prefix}secondary-hover-background: #{get-shade-from-color(slate, 800)};
+  #{$css-var-prefix}secondary-focus: #{get-shade-from-color(zinc, 500, 0.25)};
+  #{$css-var-prefix}secondary-inverse: #{get-shade-from-color(zinc, 950)};
 
   // Contrast colors
-  #{$css-var-prefix}contrast: #{$zinc-100};
-  #{$css-var-prefix}contrast-background: #{$slate-950};
-  #{$css-var-prefix}contrast-underline: #{$zinc-100};
+  #{$css-var-prefix}contrast: #{get-shade-from-color(zinc, 100)};
+  #{$css-var-prefix}contrast-background: #{get-shade-from-color(slate, 950)};
+  #{$css-var-prefix}contrast-underline: #{get-shade-from-color(zinc, 100)};
   #{$css-var-prefix}contrast-hover: #{$white};
   #{$css-var-prefix}contrast-hover-background: #{$black};
-  #{$css-var-prefix}contrast-focus: #{rgba($zinc-100, 0.25)};
+  #{$css-var-prefix}contrast-focus: #{get-shade-from-color(zinc, 100, 0.25)};
   #{$css-var-prefix}contrast-inverse: #{$black};
 
   // Card
-  #{$css-var-prefix}card-background-color: #{$slate-900};
-  #{$css-var-prefix}card-border-color: #{$slate-900};
+  #{$css-var-prefix}card-background-color: #{get-shade-from-color(slate, 900)};
+  #{$css-var-prefix}card-border-color: #{get-shade-from-color(slate, 900)};
   #{$css-var-prefix}card-box-shadow:
     0 0.125rem 1rem #{rgba($black, 0.06)},
     0 0.125rem 2rem #{rgba($black, 0.04)},
     0 0 0 0.0625rem #{rgba($black, 0.06)};
-  #{$css-var-prefix}card-sectionning-background-color: #{$slate-950};
+  #{$css-var-prefix}card-sectionning-background-color: #{get-shade-from-color(slate, 950)};
 
   // Code
-  #{$css-var-prefix}code-background-color: #{$slate-950};
-  #{$css-var-prefix}code-color: #{$zinc-300};
-  #{$css-var-prefix}code-kbd-background-color: #{$slate-900};
-  #{$css-var-prefix}code-kbd-color: #{$zinc-300};
-  #{$css-var-prefix}code-tag-color: #{$amber-500};
-  #{$css-var-prefix}code-property-color: #{$green-500};
-  #{$css-var-prefix}code-value-color: #{$indigo-500};
-  #{$css-var-prefix}code-comment-color: #{$zinc-500};
+  #{$css-var-prefix}code-background-color: #{get-shade-from-color(slate, 950)};
+  #{$css-var-prefix}code-color: #{get-shade-from-color(zinc, 300)};
+  #{$css-var-prefix}code-kbd-background-color: #{get-shade-from-color(slate, 900)};
+  #{$css-var-prefix}code-kbd-color: #{get-shade-from-color(zinc, 300)};
+  #{$css-var-prefix}code-tag-color: #{get-shade-from-color(amber, 500)};
+  #{$css-var-prefix}code-property-color: #{get-shade-from-color("green", 500)};
+  #{$css-var-prefix}code-value-color: #{get-shade-from-color("indigo", 500)};
+  #{$css-var-prefix}code-comment-color: #{get-shade-from-color(zinc, 500)};
 
   // Form elements
-  #{$css-var-prefix}form-element-background-color: #{$slate-950};
-  #{$css-var-prefix}form-element-border-color: #{$slate-950};
-  #{$css-var-prefix}form-element-color: #{$zinc-200};
-  #{$css-var-prefix}form-element-placeholder-color: #{$zinc-500};
-  #{$css-var-prefix}form-element-active-background-color: #{$slate-950};
+  #{$css-var-prefix}form-element-background-color: #{get-shade-from-color(slate, 950)};
+  #{$css-var-prefix}form-element-border-color: #{get-shade-from-color(slate, 950)};
+  #{$css-var-prefix}form-element-color: #{get-shade-from-color(zinc, 200)};
+  #{$css-var-prefix}form-element-placeholder-color: #{get-shade-from-color(zinc, 500)};
+  #{$css-var-prefix}form-element-active-background-color: #{get-shade-from-color(slate, 950)};
   #{$css-var-prefix}form-element-active-border-color: var(--primary);
-  #{$css-var-prefix}form-element-focus-color: #{$zinc-200};
-  #{$css-var-prefix}form-element-disabled-background-color: #{$slate-900};
-  #{$css-var-prefix}form-element-disabled-border-color: #{$slate-900};
-  #{$css-var-prefix}form-element-disabled-color: #{$zinc-500};
-  #{$css-var-prefix}form-element-invalid-border-color: #{$red-900};
-  #{$css-var-prefix}form-element-invalid-active-border-color: #{$red-800};
-  #{$css-var-prefix}form-element-invalid-focus-color: #{$red-800};
-  #{$css-var-prefix}form-element-valid-border-color: #{$green-900};
-  #{$css-var-prefix}form-element-valid-active-border-color: #{$green-800};
-  #{$css-var-prefix}form-element-valid-focus-color: #{$green-800};
+  #{$css-var-prefix}form-element-focus-color: #{get-shade-from-color(zinc, 200)};
+  #{$css-var-prefix}form-element-disabled-background-color: #{get-shade-from-color(slate, 900)};
+  #{$css-var-prefix}form-element-disabled-border-color: #{get-shade-from-color(slate, 900)};
+  #{$css-var-prefix}form-element-disabled-color: #{get-shade-from-color(zinc, 500)};
+  #{$css-var-prefix}form-element-invalid-border-color: #{get-shade-from-color("red", 900)};
+  #{$css-var-prefix}form-element-invalid-active-border-color: #{get-shade-from-color("red", 800)};
+  #{$css-var-prefix}form-element-invalid-focus-color: #{get-shade-from-color("red", 800)};
+  #{$css-var-prefix}form-element-valid-border-color: #{get-shade-from-color("green", 900)};
+  #{$css-var-prefix}form-element-valid-active-border-color: #{get-shade-from-color("green", 800)};
+  #{$css-var-prefix}form-element-valid-focus-color: #{get-shade-from-color("green", 800)};
 
   // Switch (input[type="checkbox"][role="switch"])
-  #{$css-var-prefix}switch-background-color: #{$slate-850};
-  #{$css-var-prefix}switch-color: #{$zinc-450};
+  #{$css-var-prefix}switch-background-color: #{get-shade-from-color(slate, 850)};
+  #{$css-var-prefix}switch-color: #{get-shade-from-color(zinc, 450)};
   #{$css-var-prefix}switch-checked-background-color: var(--primary);
   #{$css-var-prefix}switch-checked-color: var(--primary-inverse);
   #{$css-var-prefix}switch-thumb-box-shadow: var(--switch-thumb-box-shadow);
 
   // Range (input[type="range"])
-  #{$css-var-prefix}range-border-color: #{$slate-850};
-  #{$css-var-prefix}range-active-border-color: #{$slate-800};
+  #{$css-var-prefix}range-border-color: #{get-shade-from-color(slate, 850)};
+  #{$css-var-prefix}range-active-border-color: #{get-shade-from-color(slate, 800)};
   #{$css-var-prefix}range-thumb-border-color: var(--primary-hover);
   #{$css-var-prefix}range-thumb-color: var(--primary);
   #{$css-var-prefix}range-thumb-hover-color: var(--primary-hover);
   #{$css-var-prefix}range-thumb-active-color: var(--primary-hover);
-  #{$css-var-prefix}range-thumb-disabled-color: #{$slate-800};
-  #{$css-var-prefix}range-thumb-box-shadow: 0 0 0 0.1875rem #{$slate-900};
+  #{$css-var-prefix}range-thumb-disabled-color: #{get-shade-from-color(slate, 800)};
+  #{$css-var-prefix}range-thumb-box-shadow: 0 0 0 0.1875rem #{get-shade-from-color(slate, 900)};
   #{$css-var-prefix}range-thumb-focus-box-shadow:
-    0 0 0 0.1875rem #{$slate-900},
+    0 0 0 0.1875rem #{get-shade-from-color(slate, 900)},
     0 0 0 0.375rem var(--primary-focus);
 
   // Table
-  #{$css-var-prefix}table-border-color: #{$slate-900};
-  #{$css-var-prefix}table-row-stripped-background-color: #{rgba($slate-950, 0.3)};
+  #{$css-var-prefix}table-border-color: #{get-shade-from-color(slate, 900)};
+  #{$css-var-prefix}table-row-stripped-background-color: #{get-shade-from-color(slate, 950, 0.3)};
 
   // Accordion ([role="region"])
-  #{$css-var-prefix}accordion-border-color: #{$slate-850};
-  #{$css-var-prefix}accordion-active-background-color: #{$slate-950};
-  #{$css-var-prefix}accordion-active-summary-color: #{$zinc-200};
-  #{$css-var-prefix}accordion-close-summary-color: #{$zinc-450};
-  #{$css-var-prefix}accordion-open-summary-color: #{$zinc-200};
+  #{$css-var-prefix}accordion-border-color: #{get-shade-from-color(slate, 850)};
+  #{$css-var-prefix}accordion-active-background-color: #{get-shade-from-color(slate, 950)};
+  #{$css-var-prefix}accordion-active-summary-color: #{get-shade-from-color(zinc, 200)};
+  #{$css-var-prefix}accordion-close-summary-color: #{get-shade-from-color(zinc, 450)};
+  #{$css-var-prefix}accordion-open-summary-color: #{get-shade-from-color(zinc, 200)};
 
   // Progress
-  #{$css-var-prefix}progress-background-color: #{$slate-850};
+  #{$css-var-prefix}progress-background-color: #{get-shade-from-color(slate, 850)};
   #{$css-var-prefix}progress-color: var(--primary);
 
   // Loading ([aria-busy=true])
   #{$css-var-prefix}loading-spinner-opacity: 0.5;
 
   // Tooltip ([data-tooltip])
-  #{$css-var-prefix}tooltip-background-color: #{$slate-950};
-  #{$css-var-prefix}tooltip-color: #{$zinc-200};
+  #{$css-var-prefix}tooltip-background-color: #{get-shade-from-color(slate, 950)};
+  #{$css-var-prefix}tooltip-color: #{get-shade-from-color(zinc, 200)};
 
   // Icons
-  #{$css-var-prefix}icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-  #{$css-var-prefix}icon-date: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
-  #{$css-var-prefix}icon-search: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
-  #{$css-var-prefix}icon-time: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 6 12 12 16 14'%3E%3C/polyline%3E%3C/svg%3E");
-  #{$css-var-prefix}icon-file: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'%3E%3C/path%3E%3Cpolyline points='14 2 14 8 20 8'%3E%3C/polyline%3E%3C/svg%3E");
-  #{$css-var-prefix}icon-email: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'%3E%3C/path%3E%3Cpolyline points='22,6 12,13 2,6'%3E%3C/polyline%3E%3C/svg%3E");
-  #{$css-var-prefix}icon-phone: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'%3E%3C/path%3E%3C/svg%3E");
-  #{$css-var-prefix}icon-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'%3E%3C/path%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'%3E%3C/path%3E%3C/svg%3E");
-  #{$css-var-prefix}icon-password: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='11' width='18' height='11' rx='2' ry='2'%3E%3C/rect%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'%3E%3C/path%3E%3C/svg%3E");
-  #{$css-var-prefix}icon-loading: url("data:image/svg+xml,%3Csvg fill='none' height='24' width='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' %3E%3Cstyle%3E g %7B animation: rotate 2s linear infinite; transform-origin: center center; %7D circle %7B stroke-dasharray: 75,100; stroke-dashoffset: -5; animation: dash 1.5s ease-in-out infinite; stroke-linecap: round; %7D @keyframes rotate %7B 0%25 %7B transform: rotate(0deg); %7D 100%25 %7B transform: rotate(360deg); %7D %7D @keyframes dash %7B 0%25 %7B stroke-dasharray: 1,100; stroke-dashoffset: 0; %7D 50%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -17.5; %7D 100%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -62; %7D %7D %3C/style%3E%3Cg%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='#{functions.display-rgb($zinc-400)}' stroke-width='4' /%3E%3C/g%3E%3C/svg%3E");
+  // #{$css-var-prefix}icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  // #{$css-var-prefix}icon-date: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
+  // #{$css-var-prefix}icon-search: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  // #{$css-var-prefix}icon-time: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 6 12 12 16 14'%3E%3C/polyline%3E%3C/svg%3E");
+  // #{$css-var-prefix}icon-file: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'%3E%3C/path%3E%3Cpolyline points='14 2 14 8 20 8'%3E%3C/polyline%3E%3C/svg%3E");
+  // #{$css-var-prefix}icon-email: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'%3E%3C/path%3E%3Cpolyline points='22,6 12,13 2,6'%3E%3C/polyline%3E%3C/svg%3E");
+  // #{$css-var-prefix}icon-phone: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'%3E%3C/path%3E%3C/svg%3E");
+  // #{$css-var-prefix}icon-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'%3E%3C/path%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'%3E%3C/path%3E%3C/svg%3E");
+  // #{$css-var-prefix}icon-password: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-450)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='11' width='18' height='11' rx='2' ry='2'%3E%3C/rect%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'%3E%3C/path%3E%3C/svg%3E");
+  // #{$css-var-prefix}icon-loading: url("data:image/svg+xml,%3Csvg fill='none' height='24' width='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' %3E%3Cstyle%3E g %7B animation: rotate 2s linear infinite; transform-origin: center center; %7D circle %7B stroke-dasharray: 75,100; stroke-dashoffset: -5; animation: dash 1.5s ease-in-out infinite; stroke-linecap: round; %7D @keyframes rotate %7B 0%25 %7B transform: rotate(0deg); %7D 100%25 %7B transform: rotate(360deg); %7D %7D @keyframes dash %7B 0%25 %7B stroke-dasharray: 1,100; stroke-dashoffset: 0; %7D 50%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -17.5; %7D 100%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -62; %7D %7D %3C/style%3E%3Cg%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='#{functions.display-rgb($zinc-400)}' stroke-width='4' /%3E%3C/g%3E%3C/svg%3E");
 
   // Change the icon color to white for buttons
   @if $enable-classes {
@@ -144,15 +160,15 @@
     [role="button"] {
       &:not(.outline) {
         &:is([aria-current], :hover, :active, :focus) {
-          #{$css-var-prefix}icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-          #{$css-var-prefix}icon-date: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
-          #{$css-var-prefix}icon-search: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
-          #{$css-var-prefix}icon-time: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 6 12 12 16 14'%3E%3C/polyline%3E%3C/svg%3E");
-          #{$css-var-prefix}icon-file: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'%3E%3C/path%3E%3Cpolyline points='14 2 14 8 20 8'%3E%3C/polyline%3E%3C/svg%3E");
-          #{$css-var-prefix}icon-email: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'%3E%3C/path%3E%3Cpolyline points='22,6 12,13 2,6'%3E%3C/polyline%3E%3C/svg%3E");
-          #{$css-var-prefix}icon-phone: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'%3E%3C/path%3E%3C/svg%3E");
-          #{$css-var-prefix}icon-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'%3E%3C/path%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'%3E%3C/path%3E%3C/svg%3E");
-          #{$css-var-prefix}icon-password: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='11' width='18' height='11' rx='2' ry='2'%3E%3C/rect%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'%3E%3C/path%3E%3C/svg%3E");
+          // #{$css-var-prefix}icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+          // #{$css-var-prefix}icon-date: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
+          // #{$css-var-prefix}icon-search: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+          // #{$css-var-prefix}icon-time: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 6 12 12 16 14'%3E%3C/polyline%3E%3C/svg%3E");
+          // #{$css-var-prefix}icon-file: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'%3E%3C/path%3E%3Cpolyline points='14 2 14 8 20 8'%3E%3C/polyline%3E%3C/svg%3E");
+          // #{$css-var-prefix}icon-email: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'%3E%3C/path%3E%3Cpolyline points='22,6 12,13 2,6'%3E%3C/polyline%3E%3C/svg%3E");
+          // #{$css-var-prefix}icon-phone: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'%3E%3C/path%3E%3C/svg%3E");
+          // #{$css-var-prefix}icon-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'%3E%3C/path%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'%3E%3C/path%3E%3C/svg%3E");
+          // #{$css-var-prefix}icon-password: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-950)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='11' width='18' height='11' rx='2' ry='2'%3E%3C/rect%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'%3E%3C/path%3E%3C/svg%3E");
         }
       }
     }

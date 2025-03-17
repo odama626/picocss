@@ -49,62 +49,62 @@
   --pico-chroma-50: 0.019;
   /* Red */
   --pico-color-red-hue: 32.3;
-  --color-red: var(--color-red-550);
+  --pico-color-red: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-red-hue) / 1);
   /* Pink */
-  --color-pink-hue: 9.1;
-  --color-pink: var(--color-pink-500);
+  --pico-color-pink-hue: 9.1;
+  --pico-color-pink: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-pink-hue) / 1);
   /* Fuchsia */
-  --color-fuchsia-hue: 345.9;
-  --color-fuchsia: var(--color-fuchsia-550);
+  --pico-color-fuchsia-hue: 345.9;
+  --pico-color-fuchsia: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-fuchsia-hue) / 1);
   /* Purple */
-  --color-purple-hue: 321.5;
-  --color-purple: var(--color-purple-600);
+  --pico-color-purple-hue: 321.5;
+  --pico-color-purple: oklch(var(--pico-luma-600), var(--pico-chroma-600), var(--pico-color-purple-hue) / 1);
   /* Violet */
-  --color-violet-hue: 301.9;
-  --color-violet: var(--color-violet-600);
+  --pico-color-violet-hue: 301.9;
+  --pico-color-violet: oklch(var(--pico-luma-600), var(--pico-chroma-600), var(--pico-color-violet-hue) / 1);
   /* Indigo */
-  --color-indigo-hue: 285.7;
-  --color-indigo: var(--color-indigo-600);
+  --pico-color-indigo-hue: 285.7;
+  --pico-color-indigo: oklch(var(--pico-luma-600), var(--pico-chroma-600), var(--pico-color-indigo-hue) / 1);
   /* Blue */
-  --color-blue-hue: 262.7;
-  --color-blue: var(--color-blue-550);
+  --pico-color-blue-hue: 262.7;
+  --pico-color-blue: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-blue-hue) / 1);
   /* Azure */
-  --color-azure-hue: 244.5;
-  --color-azure: var(--color-azure-550);
+  --pico-color-azure-hue: 244.5;
+  --pico-color-azure: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-azure-hue) / 1);
   /* Cyan */
-  --color-cyan-hue: 194.7;
-  --color-cyan: var(--color-cyan-550);
+  --pico-color-cyan-hue: 194.7;
+  --pico-color-cyan: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-cyan-hue) / 1);
   /* Jade */
-  --color-jade-hue: 160.5;
-  --color-jade: var(--color-jade-550);
+  --pico-color-jade-hue: 160.5;
+  --pico-color-jade: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-jade-hue) / 1);
   /* Green */
-  --color-green-hue: 137.5;
-  --color-green: var(--color-green-500);
+  --pico-color-green-hue: 137.5;
+  --pico-color-green: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-green-hue) / 1);
   /* Lime */
-  --color-lime-hue: 123.8;
-  --color-lime: var(--color-lime-200);
+  --pico-color-lime-hue: 123.8;
+  --pico-color-lime: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-lime-hue) / 1);
   /* Yellow */
-  --color-yellow-hue: 102.7;
-  --color-yellow: var(--color-yellow-100);
+  --pico-color-yellow-hue: 102.7;
+  --pico-color-yellow: oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-yellow-hue) / 1);
   /* Amber */
-  --color-amber-hue: 84.2;
-  --color-amber: var(--color-amber-200);
+  --pico-color-amber-hue: 84.2;
+  --pico-color-amber: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-amber-hue) / 1);
   /* Pumpkin */
-  --color-pumpkin-hue: 65.1;
-  --color-pumpkin: var(--color-pumpkin-300);
+  --pico-color-pumpkin-hue: 65.1;
+  --pico-color-pumpkin: oklch(var(--pico-luma-300), var(--pico-chroma-300), var(--pico-color-pumpkin-hue) / 1);
   /* Orange */
-  --color-orange-hue: 39.7;
-  --color-orange: var(--color-orange-500);
+  --pico-color-orange-hue: 39.7;
+  --pico-color-orange: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-orange-hue) / 1);
   /* Sand */
-  --color-sand-hue: 90.9;
-  --color-sand: var(--color-sand-200);
+  --pico-color-sand-hue: 90.9;
+  --pico-color-sand: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-sand-hue) / 1);
   /* Grey */
-  --color-grey-hue: 0;
-  --color-grey: var(--color-grey-300);
+  --pico-color-grey-hue: 0;
+  --pico-color-grey: oklch(var(--pico-luma-300), var(--pico-chroma-300), var(--pico-color-grey-hue) / 1);
   /* Zinc */
-  --color-zinc-hue: 262.3;
-  --color-zinc: var(--color-zinc-550);
+  --pico-color-zinc-hue: 262.3;
+  --pico-color-zinc: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-zinc-hue) / 1);
   /* Slate */
-  --color-slate-hue: 264.9;
-  --color-slate: var(--color-slate-600);
+  --pico-color-slate-hue: 264.9;
+  --pico-color-slate: oklch(var(--pico-luma-600), var(--pico-chroma-600), var(--pico-color-slate-hue) / 1);
 }

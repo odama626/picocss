@@ -3,6 +3,116 @@
  * Pico CSS ✨ v2.0.6 (https://picocss.com)
  * Copyright 2019-2024 - Licensed under MIT
  */
+/*!
+ * Pico CSS Colors ✨
+ * Copyright 2019-2024 - Licensed under MIT
+ */
+:root {
+  /* Base Colors */
+  --pico-color-black: #000;
+  --pico-color-white: #fff;
+  /* Luminance Averages */
+  --pico-luma-950: 17.9%;
+  --pico-luma-900: 22.8%;
+  --pico-luma-850: 27.2%;
+  --pico-luma-800: 31.5%;
+  --pico-luma-750: 35.9%;
+  --pico-luma-700: 40.2%;
+  --pico-luma-650: 44.7%;
+  --pico-luma-600: 49.1%;
+  --pico-luma-550: 53.5%;
+  --pico-luma-500: 57.7%;
+  --pico-luma-450: 62%;
+  --pico-luma-400: 66.1%;
+  --pico-luma-350: 70.2%;
+  --pico-luma-300: 74.4%;
+  --pico-luma-250: 78.6%;
+  --pico-luma-200: 82.8%;
+  --pico-luma-150: 87%;
+  --pico-luma-100: 91.2%;
+  --pico-luma-50: 95.5%;
+  /* Chroma Averages */
+  --pico-chroma-950: 0.026;
+  --pico-chroma-900: 0.038;
+  --pico-chroma-850: 0.053;
+  --pico-chroma-800: 0.07;
+  --pico-chroma-750: 0.085;
+  --pico-chroma-700: 0.098;
+  --pico-chroma-650: 0.111;
+  --pico-chroma-600: 0.123;
+  --pico-chroma-550: 0.134;
+  --pico-chroma-500: 0.145;
+  --pico-chroma-450: 0.153;
+  --pico-chroma-400: 0.153;
+  --pico-chroma-350: 0.142;
+  --pico-chroma-300: 0.124;
+  --pico-chroma-250: 0.105;
+  --pico-chroma-200: 0.085;
+  --pico-chroma-150: 0.063;
+  --pico-chroma-100: 0.042;
+  --pico-chroma-50: 0.019;
+  /* Red */
+  --pico-color-red-hue: 32.3;
+  --pico-color-red: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-red-hue) / 1);
+  /* Pink */
+  --pico-color-pink-hue: 9.1;
+  --pico-color-pink: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-pink-hue) / 1);
+  /* Fuchsia */
+  --pico-color-fuchsia-hue: 345.9;
+  --pico-color-fuchsia: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-fuchsia-hue) / 1);
+  /* Purple */
+  --pico-color-purple-hue: 321.5;
+  --pico-color-purple: oklch(var(--pico-luma-600), var(--pico-chroma-600), var(--pico-color-purple-hue) / 1);
+  /* Violet */
+  --pico-color-violet-hue: 301.9;
+  --pico-color-violet: oklch(var(--pico-luma-600), var(--pico-chroma-600), var(--pico-color-violet-hue) / 1);
+  /* Indigo */
+  --pico-color-indigo-hue: 285.7;
+  --pico-color-indigo: oklch(var(--pico-luma-600), var(--pico-chroma-600), var(--pico-color-indigo-hue) / 1);
+  /* Blue */
+  --pico-color-blue-hue: 262.7;
+  --pico-color-blue: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-blue-hue) / 1);
+  /* Azure */
+  --pico-color-azure-hue: 244.5;
+  --pico-color-azure: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-azure-hue) / 1);
+  /* Cyan */
+  --pico-color-cyan-hue: 194.7;
+  --pico-color-cyan: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-cyan-hue) / 1);
+  /* Jade */
+  --pico-color-jade-hue: 160.5;
+  --pico-color-jade: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-jade-hue) / 1);
+  /* Green */
+  --pico-color-green-hue: 137.5;
+  --pico-color-green: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-green-hue) / 1);
+  /* Lime */
+  --pico-color-lime-hue: 123.8;
+  --pico-color-lime: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-lime-hue) / 1);
+  /* Yellow */
+  --pico-color-yellow-hue: 102.7;
+  --pico-color-yellow: oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-yellow-hue) / 1);
+  /* Amber */
+  --pico-color-amber-hue: 84.2;
+  --pico-color-amber: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-amber-hue) / 1);
+  /* Pumpkin */
+  --pico-color-pumpkin-hue: 65.1;
+  --pico-color-pumpkin: oklch(var(--pico-luma-300), var(--pico-chroma-300), var(--pico-color-pumpkin-hue) / 1);
+  /* Orange */
+  --pico-color-orange-hue: 39.7;
+  --pico-color-orange: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-orange-hue) / 1);
+  /* Sand */
+  --pico-color-sand-hue: 90.9;
+  --pico-color-sand: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-sand-hue) / 1);
+  /* Grey */
+  --pico-color-grey-hue: 0;
+  --pico-color-grey: oklch(var(--pico-luma-300), var(--pico-chroma-300), var(--pico-color-grey-hue) / 1);
+  /* Zinc */
+  --pico-color-zinc-hue: 262.3;
+  --pico-color-zinc: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-zinc-hue) / 1);
+  /* Slate */
+  --pico-color-slate-hue: 264.9;
+  --pico-color-slate: oklch(var(--pico-luma-600), var(--pico-chroma-600), var(--pico-color-slate-hue) / 1);
+}
+
 /**
  * Styles
  */
@@ -217,7 +327,7 @@ nav details.dropdown summary:focus-visible {
 }
 
 .pico [aria-busy=true]:not(input, select, textarea):is(button, [type=submit], [type=button], [type=reset], [role=button]):not(.outline)::before {
-  filter: brightness(0) invert(1);
+  filter: var --icon-loading-filter;
 }
 
 /**
@@ -226,82 +336,81 @@ nav details.dropdown summary:focus-visible {
 [data-theme=light],
 :root:not([data-theme=dark]) {
   --pico-background-color: #fff;
-  --pico-color: #373c44;
-  --pico-text-selection-color: rgba(167, 128, 212, 0.25);
-  --pico-muted-color: #646b79;
-  --pico-muted-border-color: rgb(231, 234, 239.5);
-  --pico-primary: #8352c5;
-  --pico-primary-background: #7540bf;
-  --pico-primary-border: var(--pico-primary-background);
-  --pico-primary-underline: rgba(131, 82, 197, 0.5);
-  --pico-primary-hover: #6935b3;
-  --pico-primary-hover-background: #6935b3;
-  --pico-primary-hover-border: var(--pico-primary-hover-background);
-  --pico-primary-hover-underline: var(--pico-primary-hover);
-  --pico-primary-focus: rgba(167, 128, 212, 0.5);
-  --pico-primary-inverse: #fff;
-  --pico-secondary: #5d6b89;
-  --pico-secondary-background: #525f7a;
+  --pico-color: oklch(var(--pico-luma-750), var(--pico-chroma-750), var(--pico-color-zinc-hue) / 1);
+  --pico-hue: var(--pico-color-violet-hue);
+  --pico-text-selection-color: oklch(var(--pico-luma-400), var(--pico-chroma-400), var(--pico-hue) / 0.25);
+  --pico-switch-thumb-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  --pico-icon-loading-filter: brightness(0) invert(0);
+  --pico-muted-color: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-zinc-hue) / 1);
+  --pico-muted-border-color: color-mix(in oklch, oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-slate-hue) / 1), oklch(var(--pico-luma-50), var(--pico-chroma-50), var(--pico-color-slate-hue) / 1));
+  --pico-primary: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-hue) / 1);
+  --pico-primary-background: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-hue) / 1);
+  --pico-primary-underline: oklch(var(--pico-luma-400), var(--pico-chroma-400), var(--pico-hue) / 0.5);
+  --pico-primary-hover: oklch(var(--pico-luma-650), var(--pico-chroma-650), var(--pico-hue) / 1);
+  --pico-primary-hover-background: oklch(var(--pico-luma-250), var(--pico-chroma-250), var(--pico-hue) / 1);
+  --pico-primary-focus: oklch(var(--pico-luma-400), var(--pico-chroma-400), var(--pico-hue) / 0.5);
+  --pico-primary-inverse: oklch(100% 0 0deg); /* White for dark colors */
+  --pico-secondary: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-slate-hue) / 1);
+  --pico-secondary-background: oklch(var(--pico-luma-600), var(--pico-chroma-600), var(--pico-color-slate-hue) / 1);
   --pico-secondary-border: var(--pico-secondary-background);
-  --pico-secondary-underline: rgba(93, 107, 137, 0.5);
-  --pico-secondary-hover: #48536b;
-  --pico-secondary-hover-background: #48536b;
+  --pico-secondary-underline: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-slate-hue) / 0.5);
+  --pico-secondary-hover: oklch(var(--pico-luma-650), var(--pico-chroma-650), var(--pico-color-slate-hue) / 1);
+  --pico-secondary-hover-background: oklch(var(--pico-luma-650), var(--pico-chroma-650), var(--pico-color-slate-hue) / 1);
   --pico-secondary-hover-border: var(--pico-secondary-hover-background);
   --pico-secondary-hover-underline: var(--pico-secondary-hover);
-  --pico-secondary-focus: rgba(93, 107, 137, 0.25);
+  --pico-secondary-focus: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-slate-hue) / 0.25);
   --pico-secondary-inverse: #fff;
-  --pico-contrast: #181c25;
-  --pico-contrast-background: #181c25;
+  --pico-contrast: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+  --pico-contrast-background: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
   --pico-contrast-border: var(--pico-contrast-background);
-  --pico-contrast-underline: rgba(24, 28, 37, 0.5);
+  --pico-contrast-underline: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 0.5);
   --pico-contrast-hover: #000;
   --pico-contrast-hover-background: #000;
   --pico-contrast-hover-border: var(--pico-contrast-hover-background);
   --pico-contrast-hover-underline: var(--pico-secondary-hover);
-  --pico-contrast-focus: rgba(93, 107, 137, 0.25);
+  --pico-contrast-focus: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-slate-hue) / 0.25);
   --pico-contrast-inverse: #fff;
-  --pico-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(129, 145, 181, 0.01698), 0.0335rem 0.067rem 0.402rem rgba(129, 145, 181, 0.024), 0.0625rem 0.125rem 0.75rem rgba(129, 145, 181, 0.03), 0.1125rem 0.225rem 1.35rem rgba(129, 145, 181, 0.036), 0.2085rem 0.417rem 2.502rem rgba(129, 145, 181, 0.04302), 0.5rem 1rem 6rem rgba(129, 145, 181, 0.06), 0 0 0 0.0625rem rgba(129, 145, 181, 0.015);
-  --pico-h1-color: #2d3138;
-  --pico-h2-color: #373c44;
-  --pico-h3-color: #424751;
-  --pico-h4-color: #4d535e;
-  --pico-h5-color: #5c6370;
-  --pico-h6-color: #646b79;
-  --pico-mark-background-color: rgb(252.5, 230.5, 191.5);
-  --pico-mark-color: #0f1114;
-  --pico-ins-color: rgb(28.5, 105.5, 84);
-  --pico-del-color: rgb(136, 56.5, 53);
+  --pico-box-shadow: 0.0145rem 0.029rem 0.174rem oklch(oklch(var(--pico-luma-400), var(--pico-chroma-400), var(--pico-color-slate-hue) / 1)/0.01698), 0.0335rem 0.067rem 0.402rem oklch(oklch(var(--pico-luma-400), var(--pico-chroma-400), var(--pico-color-slate-hue) / 1)/0.024), 0.0625rem 0.125rem 0.75rem oklch(oklch(var(--pico-luma-400), var(--pico-chroma-400), var(--pico-color-slate-hue) / 1)/0.03), 0.1125rem 0.225rem 1.35rem oklch(oklch(var(--pico-luma-400), var(--pico-chroma-400), var(--pico-color-slate-hue) / 1)/0.036), 0.2085rem 0.417rem 2.502rem oklch(oklch(var(--pico-luma-400), var(--pico-chroma-400), var(--pico-color-slate-hue) / 1)/0.04302), 0.5rem 1rem 6rem oklch(oklch(var(--pico-luma-400), var(--pico-chroma-400), var(--pico-color-slate-hue) / 1)/0.06), 0 0 0 0.0625rem oklch(oklch(var(--pico-luma-400), var(--pico-chroma-400), var(--pico-color-slate-hue) / 1)/0.015);
+  --pico-h1-color: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-zinc-hue) / 1);
+  --pico-h2-color: oklch(var(--pico-luma-750), var(--pico-chroma-750), var(--pico-color-zinc-hue) / 1);
+  --pico-h3-color: oklch(var(--pico-luma-700), var(--pico-chroma-700), var(--pico-color-zinc-hue) / 1);
+  --pico-h4-color: oklch(var(--pico-luma-650), var(--pico-chroma-650), var(--pico-color-zinc-hue) / 1);
+  --pico-h5-color: oklch(var(--pico-luma-600), var(--pico-chroma-600), var(--pico-color-zinc-hue) / 1);
+  --pico-h6-color: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-zinc-hue) / 1);
+  --pico-mark-background-color: color-mix(in oklch, oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-amber-hue) / 1), oklch(var(--pico-luma-50), var(--pico-chroma-50), var(--pico-color-amber-hue) / 1));
+  --pico-mark-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-zinc-hue) / 1);
+  --pico-ins-color: color-mix(in oklch, oklch(var(--pico-luma-450), var(--pico-chroma-450), var(--pico-color-jade-hue) / 1), oklch(var(--pico-luma-750), var(--pico-chroma-750), var(--pico-color-zinc-hue) / 1));
+  --pico-del-color: color-mix(in oklch, oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-red-hue) / 1), oklch(var(--pico-luma-750), var(--pico-chroma-750), var(--pico-color-zinc-hue) / 1));
   --pico-blockquote-border-color: var(--pico-muted-border-color);
   --pico-blockquote-footer-color: var(--pico-muted-color);
   --pico-button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   --pico-button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   --pico-table-border-color: var(--pico-muted-border-color);
-  --pico-table-row-stripped-background-color: rgba(111, 120, 135, 0.0375);
-  --pico-code-background-color: rgb(243, 244.5, 246.75);
-  --pico-code-color: #646b79;
+  --pico-table-row-stripped-background-color: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-zinc-hue) / 0.0375);
+  --pico-code-background-color: color-mix(in oklch, oklch(var(--pico-luma-50), var(--pico-chroma-50), var(--pico-color-slate-hue) / 1), #fff 75%);
+  --pico-code-color: oklch(var(--pico-luma-550), var(--pico-chroma-550), var(--pico-color-zinc-hue) / 1);
   --pico-code-kbd-background-color: var(--pico-color);
   --pico-code-kbd-color: var(--pico-background-color);
-  --pico-form-element-background-color: rgb(251, 251.5, 252.25);
-  --pico-form-element-selected-background-color: #dfe3eb;
-  --pico-form-element-border-color: #cfd5e2;
-  --pico-form-element-color: #23262c;
+  --pico-form-element-background-color: color-mix(in oklch, oklch(var(--pico-luma-50), var(--pico-chroma-50), var(--pico-color-slate-hue) / 1), #fff 25%);
+  --pico-form-element-selected-background-color: oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-slate-hue) / 1);
+  --pico-form-element-border-color: oklch(var(--pico-luma-150), var(--pico-chroma-150), var(--pico-color-slate-hue) / 1);
+  --pico-form-element-color: oklch(var(--pico-luma-850), var(--pico-chroma-850), var(--pico-color-zinc-hue) / 1);
   --pico-form-element-placeholder-color: var(--pico-muted-color);
   --pico-form-element-active-background-color: #fff;
   --pico-form-element-active-border-color: var(--pico-primary-border);
   --pico-form-element-focus-color: var(--pico-primary-border);
   --pico-form-element-disabled-opacity: 0.5;
-  --pico-form-element-invalid-border-color: rgb(183.5, 105.5, 106.5);
-  --pico-form-element-invalid-active-border-color: rgb(200.25, 79.25, 72.25);
+  --pico-form-element-invalid-border-color: color-mix(in oklch, oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-red-hue) / 1), oklch(var(--pico-luma-350), var(--pico-chroma-350), var(--pico-color-zinc-hue) / 1));
+  --pico-form-element-invalid-active-border-color: color-mix(in oklch, oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-red-hue) / 1), oklch(var(--pico-luma-350), var(--pico-chroma-350), var(--pico-color-zinc-hue) / 1), 75%);
   --pico-form-element-invalid-focus-color: var(--pico-form-element-invalid-active-border-color);
-  --pico-form-element-valid-border-color: rgb(76, 154.5, 137.5);
-  --pico-form-element-valid-active-border-color: rgb(39, 152.75, 118.75);
+  --pico-form-element-valid-border-color: color-mix(in oklch, oklch(var(--pico-luma-450), var(--pico-chroma-450), var(--pico-color-jade-hue) / 1), oklch(var(--pico-luma-350), var(--pico-chroma-350), var(--pico-color-zinc-hue) / 1));
+  --pico-form-element-valid-active-border-color: color-mix(in oklch, oklch(var(--pico-luma-450), var(--pico-chroma-450), var(--pico-color-jade-hue) / 1), oklch(var(--pico-luma-350), var(--pico-chroma-350), var(--pico-color-zinc-hue) / 1), 75%);
   --pico-form-element-valid-focus-color: var(--pico-form-element-valid-active-border-color);
-  --pico-switch-background-color: #bfc7d9;
+  --pico-switch-background-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-slate-hue) / 1);
   --pico-switch-checked-background-color: var(--pico-primary-background);
   --pico-switch-color: #fff;
-  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  --pico-range-border-color: #dfe3eb;
-  --pico-range-active-border-color: #bfc7d9;
+  --pico-range-border-color: oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-slate-hue) / 1);
+  --pico-range-active-border-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-slate-hue) / 1);
   --pico-range-thumb-border-color: var(--pico-background-color);
   --pico-range-thumb-color: var(--pico-secondary-background);
   --pico-range-thumb-active-color: var(--pico-primary-background);
@@ -312,20 +421,18 @@ nav details.dropdown summary:focus-visible {
   --pico-card-background-color: var(--pico-background-color);
   --pico-card-border-color: var(--pico-muted-border-color);
   --pico-card-box-shadow: var(--pico-box-shadow);
-  --pico-card-sectioning-background-color: rgb(251, 251.5, 252.25);
+  --pico-card-sectioning-background-color: color-mix(in oklch, oklch(var(--pico-luma-50), var(--pico-chroma-50), var(--pico-color-slate-hue) / 1), #fff 25%);
   --pico-dropdown-background-color: #fff;
-  --pico-dropdown-border-color: #eff1f4;
+  --pico-dropdown-border-color: oklch(var(--pico-luma-50), var(--pico-chroma-50), var(--pico-color-slate-hue) / 1);
   --pico-dropdown-box-shadow: var(--pico-box-shadow);
   --pico-dropdown-color: var(--pico-color);
-  --pico-dropdown-hover-background-color: #eff1f4;
+  --pico-dropdown-hover-background-color: oklch(var(--pico-luma-50), var(--pico-chroma-50), var(--pico-color-slate-hue) / 1);
   --pico-loading-spinner-opacity: 0.5;
-  --pico-modal-overlay-background-color: rgba(232, 234, 237, 0.75);
-  --pico-progress-background-color: #dfe3eb;
+  --pico-modal-overlay-background-color: oklch(color-mix(in oklch, oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-zinc-hue) / 1), oklch(var(--pico-luma-50), var(--pico-chroma-50), var(--pico-color-zinc-hue) / 1))/0.75);
+  --pico-progress-background-color: oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-slate-hue) / 1);
   --pico-progress-color: var(--pico-primary-background);
   --pico-tooltip-background-color: var(--pico-contrast-background);
   --pico-tooltip-color: var(--pico-contrast-inverse);
-  --pico-icon-valid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(76, 155, 138)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-  --pico-icon-invalid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(200, 79, 72)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");
   color-scheme: light;
 }
 [data-theme=light] input:is([type=submit],
@@ -345,251 +452,192 @@ nav details.dropdown summary:focus-visible {
 
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --pico-background-color: rgb(19, 22.5, 30.5);
-    --pico-color: #c2c7d0;
-    --pico-text-selection-color: rgba(178, 144, 217, 0.1875);
-    --pico-muted-color: #7b8495;
-    --pico-muted-border-color: #202632;
-    --pico-primary: #b290d9;
-    --pico-primary-background: #7540bf;
-    --pico-primary-border: var(--pico-primary-background);
-    --pico-primary-underline: rgba(178, 144, 217, 0.5);
-    --pico-primary-hover: #c9afe4;
-    --pico-primary-hover-background: #8352c5;
-    --pico-primary-hover-border: var(--pico-primary-hover-background);
-    --pico-primary-hover-underline: var(--pico-primary-hover);
-    --pico-primary-focus: rgba(178, 144, 217, 0.375);
-    --pico-primary-inverse: #fff;
-    --pico-secondary: #969eaf;
-    --pico-secondary-background: #525f7a;
-    --pico-secondary-border: var(--pico-secondary-background);
-    --pico-secondary-underline: rgba(150, 158, 175, 0.5);
-    --pico-secondary-hover: #b3b9c5;
-    --pico-secondary-hover-background: #5d6b89;
-    --pico-secondary-hover-border: var(--pico-secondary-hover-background);
-    --pico-secondary-hover-underline: var(--pico-secondary-hover);
-    --pico-secondary-focus: rgba(144, 158, 190, 0.25);
-    --pico-secondary-inverse: #fff;
-    --pico-contrast: #dfe3eb;
-    --pico-contrast-background: #eff1f4;
-    --pico-contrast-border: var(--pico-contrast-background);
-    --pico-contrast-underline: rgba(223, 227, 235, 0.5);
+    --pico-background-color: color-mix(in oklch, oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1), oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1));
+    --pico-hue: var(--pico-color-violet-hue);
+    --pico-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-zinc-hue) / 1);
+    --pico-text-selection-color: var(--text-selection-color);
+    --pico-muted-color: oklch(var(--pico-luma-450), var(--pico-chroma-450), var(--pico-color-zinc-hue) / 1);
+    --pico-muted-border-color: oklch(var(--pico-luma-850), var(--pico-chroma-850), var(--pico-color-slate-hue) / 1);
+    --pico-primary: oklch(var(--pico-luma-350), var(--pico-chroma-350), var(--pico-hue) / 1);
+    --pico-primary-background: oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-hue) / 1);
+    --pico-primary-underline: oklch(var(--pico-luma-350), var(--pico-chroma-350), var(--pico-hue) / 0.5);
+    --pico-primary-hover: oklch(var(--pico-luma-250), var(--pico-chroma-250), var(--pico-hue) / 1);
+    --pico-primary-hover-background: oklch(var(--pico-luma-150), var(--pico-chroma-150), var(--pico-hue) / 1);
+    --pico-primary-focus: oklch(var(--pico-luma-350), var(--pico-chroma-350), var(--pico-hue) / 0.375);
+    --pico-primary-inverse: oklch(0% 0 0deg); /* Black for light colors */
+    --pico-switch-thumb-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    --pico-icon-loading-filter: brightness(0) invert(0);
+    --pico-primary: var(--primary);
+    --pico-primary-background: var(--primary-background);
+    --pico-primary-underline: var(--primary-underline);
+    --pico-primary-hover: var(--primary-hover);
+    --pico-primary-hover-background: var(--primary-hover-background);
+    --pico-primary-focus: var(--primary-focus);
+    --pico-primary-inverse: var(--primary-inverse);
+    --pico-secondary: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-zinc-hue) / 1);
+    --pico-secondary-background: oklch(var(--pico-luma-850), var(--pico-chroma-850), var(--pico-color-slate-hue) / 1);
+    --pico-secondary-underline: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-zinc-hue) / 1);
+    --pico-secondary-hover: oklch(var(--pico-luma-300), var(--pico-chroma-300), var(--pico-color-zinc-hue) / 1);
+    --pico-secondary-hover-background: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-slate-hue) / 1);
+    --pico-secondary-focus: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-zinc-hue) / 0.25);
+    --pico-secondary-inverse: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-zinc-hue) / 1);
+    --pico-contrast: oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-zinc-hue) / 1);
+    --pico-contrast-background: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+    --pico-contrast-underline: oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-zinc-hue) / 1);
     --pico-contrast-hover: #fff;
-    --pico-contrast-hover-background: #fff;
-    --pico-contrast-hover-border: var(--pico-contrast-hover-background);
-    --pico-contrast-hover-underline: var(--pico-contrast-hover);
-    --pico-contrast-focus: rgba(207, 213, 226, 0.25);
+    --pico-contrast-hover-background: #000;
+    --pico-contrast-focus: oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-zinc-hue) / 0.25);
     --pico-contrast-inverse: #000;
-    --pico-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(7, 8.5, 12, 0.01698), 0.0335rem 0.067rem 0.402rem rgba(7, 8.5, 12, 0.024), 0.0625rem 0.125rem 0.75rem rgba(7, 8.5, 12, 0.03), 0.1125rem 0.225rem 1.35rem rgba(7, 8.5, 12, 0.036), 0.2085rem 0.417rem 2.502rem rgba(7, 8.5, 12, 0.04302), 0.5rem 1rem 6rem rgba(7, 8.5, 12, 0.06), 0 0 0 0.0625rem rgba(7, 8.5, 12, 0.015);
-    --pico-h1-color: #f0f1f3;
-    --pico-h2-color: #e0e3e7;
-    --pico-h3-color: #c2c7d0;
-    --pico-h4-color: #b3b9c5;
-    --pico-h5-color: #a4acba;
-    --pico-h6-color: #8891a4;
-    --pico-mark-background-color: #014063;
-    --pico-mark-color: #fff;
-    --pico-ins-color: #62af9a;
-    --pico-del-color: rgb(205.5, 126, 123);
-    --pico-blockquote-border-color: var(--pico-muted-border-color);
-    --pico-blockquote-footer-color: var(--pico-muted-color);
-    --pico-button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    --pico-button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    --pico-table-border-color: var(--pico-muted-border-color);
-    --pico-table-row-stripped-background-color: rgba(111, 120, 135, 0.0375);
-    --pico-code-background-color: rgb(26, 30.5, 40.25);
-    --pico-code-color: #8891a4;
-    --pico-code-kbd-background-color: var(--pico-color);
-    --pico-code-kbd-color: var(--pico-background-color);
-    --pico-form-element-background-color: rgb(28, 33, 43.5);
-    --pico-form-element-selected-background-color: #2a3140;
-    --pico-form-element-border-color: #2a3140;
-    --pico-form-element-color: #e0e3e7;
-    --pico-form-element-placeholder-color: #8891a4;
-    --pico-form-element-active-background-color: rgb(26, 30.5, 40.25);
-    --pico-form-element-active-border-color: var(--pico-primary-border);
-    --pico-form-element-focus-color: var(--pico-primary-border);
-    --pico-form-element-disabled-opacity: 0.5;
-    --pico-form-element-invalid-border-color: rgb(149.5, 74, 80);
-    --pico-form-element-invalid-active-border-color: rgb(183.25, 63.5, 59);
-    --pico-form-element-invalid-focus-color: var(--pico-form-element-invalid-active-border-color);
-    --pico-form-element-valid-border-color: #2a7b6f;
-    --pico-form-element-valid-active-border-color: rgb(22, 137, 105.5);
-    --pico-form-element-valid-focus-color: var(--pico-form-element-valid-active-border-color);
-    --pico-switch-background-color: #333c4e;
-    --pico-switch-checked-background-color: var(--pico-primary-background);
-    --pico-switch-color: #fff;
-    --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    --pico-range-border-color: #202632;
-    --pico-range-active-border-color: #2a3140;
-    --pico-range-thumb-border-color: var(--pico-background-color);
-    --pico-range-thumb-color: var(--pico-secondary-background);
-    --pico-range-thumb-active-color: var(--pico-primary-background);
-    --pico-accordion-border-color: var(--pico-muted-border-color);
-    --pico-accordion-active-summary-color: var(--pico-primary-hover);
-    --pico-accordion-close-summary-color: var(--pico-color);
-    --pico-accordion-open-summary-color: var(--pico-muted-color);
-    --pico-card-background-color: #181c25;
-    --pico-card-border-color: var(--pico-card-background-color);
-    --pico-card-box-shadow: var(--pico-box-shadow);
-    --pico-card-sectioning-background-color: rgb(26, 30.5, 40.25);
-    --pico-dropdown-background-color: #181c25;
-    --pico-dropdown-border-color: #202632;
-    --pico-dropdown-box-shadow: var(--pico-box-shadow);
-    --pico-dropdown-color: var(--pico-color);
-    --pico-dropdown-hover-background-color: #202632;
+    --pico-card-background-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+    --pico-card-border-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+    --pico-card-box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.06), 0 0.125rem 2rem rgba(0, 0, 0, 0.04), 0 0 0 0.0625rem rgba(0, 0, 0, 0.06);
+    --pico-card-sectionning-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+    --pico-code-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+    --pico-code-color: oklch(var(--pico-luma-300), var(--pico-chroma-300), var(--pico-color-zinc-hue) / 1);
+    --pico-code-kbd-background-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+    --pico-code-kbd-color: oklch(var(--pico-luma-300), var(--pico-chroma-300), var(--pico-color-zinc-hue) / 1);
+    --pico-code-tag-color: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-amber-hue) / 1);
+    --pico-code-property-color: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-green-hue) / 1);
+    --pico-code-value-color: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-indigo-hue) / 1);
+    --pico-code-comment-color: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-zinc-hue) / 1);
+    --pico-form-element-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+    --pico-form-element-border-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+    --pico-form-element-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-zinc-hue) / 1);
+    --pico-form-element-placeholder-color: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-zinc-hue) / 1);
+    --pico-form-element-active-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+    --pico-form-element-active-border-color: var(--primary);
+    --pico-form-element-focus-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-zinc-hue) / 1);
+    --pico-form-element-disabled-background-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+    --pico-form-element-disabled-border-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+    --pico-form-element-disabled-color: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-zinc-hue) / 1);
+    --pico-form-element-invalid-border-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-red-hue) / 1);
+    --pico-form-element-invalid-active-border-color: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-red-hue) / 1);
+    --pico-form-element-invalid-focus-color: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-red-hue) / 1);
+    --pico-form-element-valid-border-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-green-hue) / 1);
+    --pico-form-element-valid-active-border-color: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-green-hue) / 1);
+    --pico-form-element-valid-focus-color: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-green-hue) / 1);
+    --pico-switch-background-color: oklch(var(--pico-luma-850), var(--pico-chroma-850), var(--pico-color-slate-hue) / 1);
+    --pico-switch-color: oklch(var(--pico-luma-450), var(--pico-chroma-450), var(--pico-color-zinc-hue) / 1);
+    --pico-switch-checked-background-color: var(--primary);
+    --pico-switch-checked-color: var(--primary-inverse);
+    --pico-switch-thumb-box-shadow: var(--switch-thumb-box-shadow);
+    --pico-range-border-color: oklch(var(--pico-luma-850), var(--pico-chroma-850), var(--pico-color-slate-hue) / 1);
+    --pico-range-active-border-color: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-slate-hue) / 1);
+    --pico-range-thumb-border-color: var(--primary-hover);
+    --pico-range-thumb-color: var(--primary);
+    --pico-range-thumb-hover-color: var(--primary-hover);
+    --pico-range-thumb-active-color: var(--primary-hover);
+    --pico-range-thumb-disabled-color: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-slate-hue) / 1);
+    --pico-range-thumb-box-shadow: 0 0 0 0.1875rem oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+    --pico-range-thumb-focus-box-shadow: 0 0 0 0.1875rem oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1), 0 0 0 0.375rem var(--primary-focus);
+    --pico-table-border-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+    --pico-table-row-stripped-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 0.3);
+    --pico-accordion-border-color: oklch(var(--pico-luma-850), var(--pico-chroma-850), var(--pico-color-slate-hue) / 1);
+    --pico-accordion-active-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+    --pico-accordion-active-summary-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-zinc-hue) / 1);
+    --pico-accordion-close-summary-color: oklch(var(--pico-luma-450), var(--pico-chroma-450), var(--pico-color-zinc-hue) / 1);
+    --pico-accordion-open-summary-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-zinc-hue) / 1);
+    --pico-progress-background-color: oklch(var(--pico-luma-850), var(--pico-chroma-850), var(--pico-color-slate-hue) / 1);
+    --pico-progress-color: var(--primary);
     --pico-loading-spinner-opacity: 0.5;
-    --pico-modal-overlay-background-color: rgba(7.5, 8.5, 10, 0.75);
-    --pico-progress-background-color: #202632;
-    --pico-progress-color: var(--pico-primary-background);
-    --pico-tooltip-background-color: var(--pico-contrast-background);
-    --pico-tooltip-color: var(--pico-contrast-inverse);
-    --pico-icon-valid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(42, 123, 111)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-    --pico-icon-invalid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(150, 74, 80)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");
+    --pico-tooltip-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+    --pico-tooltip-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-zinc-hue) / 1);
     color-scheme: dark;
-  }
-  :root:not([data-theme]) input:is([type=submit],
-  [type=button],
-  [type=reset],
-  [type=checkbox],
-  [type=radio],
-  [type=file]) {
-    --pico-form-element-focus-color: var(--pico-primary-focus);
-  }
-  :root:not([data-theme]) .pico details summary[role=button].contrast:not(.outline)::after {
-    filter: brightness(0);
-  }
-  :root:not([data-theme]) .pico [aria-busy=true]:not(input, select, textarea).contrast:is(button,
-  [type=submit],
-  [type=button],
-  [type=reset],
-  [role=button]):not(.outline)::before {
-    filter: brightness(0);
   }
 }
 [data-theme=dark] {
-  --pico-background-color: rgb(19, 22.5, 30.5);
-  --pico-color: #c2c7d0;
-  --pico-text-selection-color: rgba(178, 144, 217, 0.1875);
-  --pico-muted-color: #7b8495;
-  --pico-muted-border-color: #202632;
-  --pico-primary: #b290d9;
-  --pico-primary-background: #7540bf;
-  --pico-primary-border: var(--pico-primary-background);
-  --pico-primary-underline: rgba(178, 144, 217, 0.5);
-  --pico-primary-hover: #c9afe4;
-  --pico-primary-hover-background: #8352c5;
-  --pico-primary-hover-border: var(--pico-primary-hover-background);
-  --pico-primary-hover-underline: var(--pico-primary-hover);
-  --pico-primary-focus: rgba(178, 144, 217, 0.375);
-  --pico-primary-inverse: #fff;
-  --pico-secondary: #969eaf;
-  --pico-secondary-background: #525f7a;
-  --pico-secondary-border: var(--pico-secondary-background);
-  --pico-secondary-underline: rgba(150, 158, 175, 0.5);
-  --pico-secondary-hover: #b3b9c5;
-  --pico-secondary-hover-background: #5d6b89;
-  --pico-secondary-hover-border: var(--pico-secondary-hover-background);
-  --pico-secondary-hover-underline: var(--pico-secondary-hover);
-  --pico-secondary-focus: rgba(144, 158, 190, 0.25);
-  --pico-secondary-inverse: #fff;
-  --pico-contrast: #dfe3eb;
-  --pico-contrast-background: #eff1f4;
-  --pico-contrast-border: var(--pico-contrast-background);
-  --pico-contrast-underline: rgba(223, 227, 235, 0.5);
+  --pico-background-color: color-mix(in oklch, oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1), oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1));
+  --pico-hue: var(--pico-color-violet-hue);
+  --pico-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-zinc-hue) / 1);
+  --pico-text-selection-color: var(--text-selection-color);
+  --pico-muted-color: oklch(var(--pico-luma-450), var(--pico-chroma-450), var(--pico-color-zinc-hue) / 1);
+  --pico-muted-border-color: oklch(var(--pico-luma-850), var(--pico-chroma-850), var(--pico-color-slate-hue) / 1);
+  --pico-primary: oklch(var(--pico-luma-350), var(--pico-chroma-350), var(--pico-hue) / 1);
+  --pico-primary-background: oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-hue) / 1);
+  --pico-primary-underline: oklch(var(--pico-luma-350), var(--pico-chroma-350), var(--pico-hue) / 0.5);
+  --pico-primary-hover: oklch(var(--pico-luma-250), var(--pico-chroma-250), var(--pico-hue) / 1);
+  --pico-primary-hover-background: oklch(var(--pico-luma-150), var(--pico-chroma-150), var(--pico-hue) / 1);
+  --pico-primary-focus: oklch(var(--pico-luma-350), var(--pico-chroma-350), var(--pico-hue) / 0.375);
+  --pico-primary-inverse: oklch(0% 0 0deg); /* Black for light colors */
+  --pico-switch-thumb-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  --pico-icon-loading-filter: brightness(0) invert(0);
+  --pico-primary: var(--primary);
+  --pico-primary-background: var(--primary-background);
+  --pico-primary-underline: var(--primary-underline);
+  --pico-primary-hover: var(--primary-hover);
+  --pico-primary-hover-background: var(--primary-hover-background);
+  --pico-primary-focus: var(--primary-focus);
+  --pico-primary-inverse: var(--primary-inverse);
+  --pico-secondary: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-zinc-hue) / 1);
+  --pico-secondary-background: oklch(var(--pico-luma-850), var(--pico-chroma-850), var(--pico-color-slate-hue) / 1);
+  --pico-secondary-underline: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-zinc-hue) / 1);
+  --pico-secondary-hover: oklch(var(--pico-luma-300), var(--pico-chroma-300), var(--pico-color-zinc-hue) / 1);
+  --pico-secondary-hover-background: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-slate-hue) / 1);
+  --pico-secondary-focus: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-zinc-hue) / 0.25);
+  --pico-secondary-inverse: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-zinc-hue) / 1);
+  --pico-contrast: oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-zinc-hue) / 1);
+  --pico-contrast-background: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+  --pico-contrast-underline: oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-zinc-hue) / 1);
   --pico-contrast-hover: #fff;
-  --pico-contrast-hover-background: #fff;
-  --pico-contrast-hover-border: var(--pico-contrast-hover-background);
-  --pico-contrast-hover-underline: var(--pico-contrast-hover);
-  --pico-contrast-focus: rgba(207, 213, 226, 0.25);
+  --pico-contrast-hover-background: #000;
+  --pico-contrast-focus: oklch(var(--pico-luma-100), var(--pico-chroma-100), var(--pico-color-zinc-hue) / 0.25);
   --pico-contrast-inverse: #000;
-  --pico-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(7, 8.5, 12, 0.01698), 0.0335rem 0.067rem 0.402rem rgba(7, 8.5, 12, 0.024), 0.0625rem 0.125rem 0.75rem rgba(7, 8.5, 12, 0.03), 0.1125rem 0.225rem 1.35rem rgba(7, 8.5, 12, 0.036), 0.2085rem 0.417rem 2.502rem rgba(7, 8.5, 12, 0.04302), 0.5rem 1rem 6rem rgba(7, 8.5, 12, 0.06), 0 0 0 0.0625rem rgba(7, 8.5, 12, 0.015);
-  --pico-h1-color: #f0f1f3;
-  --pico-h2-color: #e0e3e7;
-  --pico-h3-color: #c2c7d0;
-  --pico-h4-color: #b3b9c5;
-  --pico-h5-color: #a4acba;
-  --pico-h6-color: #8891a4;
-  --pico-mark-background-color: #014063;
-  --pico-mark-color: #fff;
-  --pico-ins-color: #62af9a;
-  --pico-del-color: rgb(205.5, 126, 123);
-  --pico-blockquote-border-color: var(--pico-muted-border-color);
-  --pico-blockquote-footer-color: var(--pico-muted-color);
-  --pico-button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  --pico-button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  --pico-table-border-color: var(--pico-muted-border-color);
-  --pico-table-row-stripped-background-color: rgba(111, 120, 135, 0.0375);
-  --pico-code-background-color: rgb(26, 30.5, 40.25);
-  --pico-code-color: #8891a4;
-  --pico-code-kbd-background-color: var(--pico-color);
-  --pico-code-kbd-color: var(--pico-background-color);
-  --pico-form-element-background-color: rgb(28, 33, 43.5);
-  --pico-form-element-selected-background-color: #2a3140;
-  --pico-form-element-border-color: #2a3140;
-  --pico-form-element-color: #e0e3e7;
-  --pico-form-element-placeholder-color: #8891a4;
-  --pico-form-element-active-background-color: rgb(26, 30.5, 40.25);
-  --pico-form-element-active-border-color: var(--pico-primary-border);
-  --pico-form-element-focus-color: var(--pico-primary-border);
-  --pico-form-element-disabled-opacity: 0.5;
-  --pico-form-element-invalid-border-color: rgb(149.5, 74, 80);
-  --pico-form-element-invalid-active-border-color: rgb(183.25, 63.5, 59);
-  --pico-form-element-invalid-focus-color: var(--pico-form-element-invalid-active-border-color);
-  --pico-form-element-valid-border-color: #2a7b6f;
-  --pico-form-element-valid-active-border-color: rgb(22, 137, 105.5);
-  --pico-form-element-valid-focus-color: var(--pico-form-element-valid-active-border-color);
-  --pico-switch-background-color: #333c4e;
-  --pico-switch-checked-background-color: var(--pico-primary-background);
-  --pico-switch-color: #fff;
-  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  --pico-range-border-color: #202632;
-  --pico-range-active-border-color: #2a3140;
-  --pico-range-thumb-border-color: var(--pico-background-color);
-  --pico-range-thumb-color: var(--pico-secondary-background);
-  --pico-range-thumb-active-color: var(--pico-primary-background);
-  --pico-accordion-border-color: var(--pico-muted-border-color);
-  --pico-accordion-active-summary-color: var(--pico-primary-hover);
-  --pico-accordion-close-summary-color: var(--pico-color);
-  --pico-accordion-open-summary-color: var(--pico-muted-color);
-  --pico-card-background-color: #181c25;
-  --pico-card-border-color: var(--pico-card-background-color);
-  --pico-card-box-shadow: var(--pico-box-shadow);
-  --pico-card-sectioning-background-color: rgb(26, 30.5, 40.25);
-  --pico-dropdown-background-color: #181c25;
-  --pico-dropdown-border-color: #202632;
-  --pico-dropdown-box-shadow: var(--pico-box-shadow);
-  --pico-dropdown-color: var(--pico-color);
-  --pico-dropdown-hover-background-color: #202632;
+  --pico-card-background-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+  --pico-card-border-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+  --pico-card-box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.06), 0 0.125rem 2rem rgba(0, 0, 0, 0.04), 0 0 0 0.0625rem rgba(0, 0, 0, 0.06);
+  --pico-card-sectionning-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+  --pico-code-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+  --pico-code-color: oklch(var(--pico-luma-300), var(--pico-chroma-300), var(--pico-color-zinc-hue) / 1);
+  --pico-code-kbd-background-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+  --pico-code-kbd-color: oklch(var(--pico-luma-300), var(--pico-chroma-300), var(--pico-color-zinc-hue) / 1);
+  --pico-code-tag-color: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-amber-hue) / 1);
+  --pico-code-property-color: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-green-hue) / 1);
+  --pico-code-value-color: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-indigo-hue) / 1);
+  --pico-code-comment-color: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-zinc-hue) / 1);
+  --pico-form-element-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+  --pico-form-element-border-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+  --pico-form-element-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-zinc-hue) / 1);
+  --pico-form-element-placeholder-color: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-zinc-hue) / 1);
+  --pico-form-element-active-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+  --pico-form-element-active-border-color: var(--primary);
+  --pico-form-element-focus-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-zinc-hue) / 1);
+  --pico-form-element-disabled-background-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+  --pico-form-element-disabled-border-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+  --pico-form-element-disabled-color: oklch(var(--pico-luma-500), var(--pico-chroma-500), var(--pico-color-zinc-hue) / 1);
+  --pico-form-element-invalid-border-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-red-hue) / 1);
+  --pico-form-element-invalid-active-border-color: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-red-hue) / 1);
+  --pico-form-element-invalid-focus-color: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-red-hue) / 1);
+  --pico-form-element-valid-border-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-green-hue) / 1);
+  --pico-form-element-valid-active-border-color: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-green-hue) / 1);
+  --pico-form-element-valid-focus-color: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-green-hue) / 1);
+  --pico-switch-background-color: oklch(var(--pico-luma-850), var(--pico-chroma-850), var(--pico-color-slate-hue) / 1);
+  --pico-switch-color: oklch(var(--pico-luma-450), var(--pico-chroma-450), var(--pico-color-zinc-hue) / 1);
+  --pico-switch-checked-background-color: var(--primary);
+  --pico-switch-checked-color: var(--primary-inverse);
+  --pico-switch-thumb-box-shadow: var(--switch-thumb-box-shadow);
+  --pico-range-border-color: oklch(var(--pico-luma-850), var(--pico-chroma-850), var(--pico-color-slate-hue) / 1);
+  --pico-range-active-border-color: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-slate-hue) / 1);
+  --pico-range-thumb-border-color: var(--primary-hover);
+  --pico-range-thumb-color: var(--primary);
+  --pico-range-thumb-hover-color: var(--primary-hover);
+  --pico-range-thumb-active-color: var(--primary-hover);
+  --pico-range-thumb-disabled-color: oklch(var(--pico-luma-800), var(--pico-chroma-800), var(--pico-color-slate-hue) / 1);
+  --pico-range-thumb-box-shadow: 0 0 0 0.1875rem oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+  --pico-range-thumb-focus-box-shadow: 0 0 0 0.1875rem oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1), 0 0 0 0.375rem var(--primary-focus);
+  --pico-table-border-color: oklch(var(--pico-luma-900), var(--pico-chroma-900), var(--pico-color-slate-hue) / 1);
+  --pico-table-row-stripped-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 0.3);
+  --pico-accordion-border-color: oklch(var(--pico-luma-850), var(--pico-chroma-850), var(--pico-color-slate-hue) / 1);
+  --pico-accordion-active-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+  --pico-accordion-active-summary-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-zinc-hue) / 1);
+  --pico-accordion-close-summary-color: oklch(var(--pico-luma-450), var(--pico-chroma-450), var(--pico-color-zinc-hue) / 1);
+  --pico-accordion-open-summary-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-zinc-hue) / 1);
+  --pico-progress-background-color: oklch(var(--pico-luma-850), var(--pico-chroma-850), var(--pico-color-slate-hue) / 1);
+  --pico-progress-color: var(--primary);
   --pico-loading-spinner-opacity: 0.5;
-  --pico-modal-overlay-background-color: rgba(7.5, 8.5, 10, 0.75);
-  --pico-progress-background-color: #202632;
-  --pico-progress-color: var(--pico-primary-background);
-  --pico-tooltip-background-color: var(--pico-contrast-background);
-  --pico-tooltip-color: var(--pico-contrast-inverse);
-  --pico-icon-valid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(42, 123, 111)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
-  --pico-icon-invalid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(150, 74, 80)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");
+  --pico-tooltip-background-color: oklch(var(--pico-luma-950), var(--pico-chroma-950), var(--pico-color-slate-hue) / 1);
+  --pico-tooltip-color: oklch(var(--pico-luma-200), var(--pico-chroma-200), var(--pico-color-zinc-hue) / 1);
   color-scheme: dark;
 }
-[data-theme=dark] input:is([type=submit],
-[type=button],
-[type=reset],
-[type=checkbox],
-[type=radio],
-[type=file]) {
-  --pico-form-element-focus-color: var(--pico-primary-focus);
-}
-[data-theme=dark] .pico details summary[role=button].contrast:not(.outline)::after {
-  filter: brightness(0);
-}
-[data-theme=dark] .pico [aria-busy=true]:not(input, select, textarea).contrast:is(button,
-[type=submit],
-[type=button],
-[type=reset],
-[role=button]):not(.outline)::before {
-  filter: brightness(0);
-}
-
 .pico progress,
 .pico [type=checkbox],
 .pico [type=radio],
